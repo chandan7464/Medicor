@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medicor | Signup</title>
+    <link rel="stylesheet" href="stylesheet/v1.css" />
+    <link rel="stylesheet" href="stylesheet/Material_Icons/style.css" />
+  </head>
+  <body class="log">
+    <header>
+      <h1>Medicor.</h1>
+    </header>
+    <div class="loginContainer">
+      <div class="form">
+        <h3>Sign Up</h3>
+        <div class="contentChangeable" id="st1">
+          <label for="txtName">Enter your Full Name :</label>
+          <input
+            type="text"
+            class="txt"
+            id="txtName"
+            autocomplete="off"
+            placeholder="eg. John Doe"
+            required
+          />
+          <button id="btnNext1" class="btn">
+            Next <i class="icon-keyboard_arrow_right"></i>
+          </button>
+          <h5>Step 1 of 4</h5>
+        </div>
+        <div class="contentChangeable" id="st2">
+          <label for="txtPhone">Phone Number :</label>
+          <input
+            type="tel"
+            class="txt"
+            id="txtPhone"
+            maxlength="10"
+            autocomplete="off"
+          />
+          <h4>Or</h4>
+          <label for="txtEmail">Email :</label>
+          <input type="text" class="txt" id="txtEmail" autocomplete="off" />
+          <button id="btnNext2" class="btn">
+            Next <i class="icon-keyboard_arrow_right"></i>
+          </button>
+          <h5>Step 2 of 4</h5>
+        </div>
+        <div class="contentChangeable" id="st3_1">
+          <label for="txtOTP">Confirm OTP :</label>
+          <input
+            type="tel"
+            class="txt"
+            id="txtOTP"
+            maxlength="6"
+            autocomplete="off"
+          />
+          <p>
+            You will shortly recieve an OTP in your phone number
+            <span id="phoneDisplay">+91 70xxxxxx76 </span>
+          </p>
+          <a onclick="chngCred()">Change Phone Number</a>
+          <a>Resend OTP</a>
+          <button id="btnNext3_1" class="btn">
+            Confirm OTP <i class="icon-keyboard_arrow_right"></i>
+          </button>
+          <h5>Step 3 of 4</h5>
+        </div>
+        <div class="contentChangeable" id="st3_2">
+          <label for="txtCode">Enter the Code :</label>
+          <input
+            type="text"
+            class="txt"
+            id="txtCode"
+            maxlength="6"
+            autocomplete="off"
+          />
+          <p>
+            You will shortly recieve an Code in your email id
+            <strong id="emailDisplay">ju****g@gmail.com</strong>
+          </p>
+          <a onclick="chngCred()">Change Email ID</a>
+          <a>Resend the Code</a>
+          <button id="btnNext3_2" class="btn">
+            Confirm Mail ID <i class="icon-keyboard_arrow_right"></i>
+          </button>
+          <h5>Step 3 of 4</h5>
+        </div>
+        <div class="contentChangeable" id="st4">
+          <label for="txtPass">Password :</label>
+          <input
+            type="password"
+            class="txt"
+            id="txtPass"
+            autocomplete="off"
+            required
+          />
+          <p>
+            For a Strong and Secured Password, make sure you password contains :
+          </p>
+          <ul>
+            <li>Is longer than 6 characters</li>
+            <li>Is not your Phone Number or Email</li>
+            <li>
+              Beside letters, include at least a number or symbol (!@#$%^&*-+=)
+            </li>
+          </ul>
+          <label for="txtPassCon">Confirm Password :</label>
+          <input
+            type="password"
+            class="txt"
+            id="txtPassCon"
+            autocomplete="off"
+            required
+          />
+          <div class="showPass">
+            <input type="checkbox" onclick="showPassword()" id="rdShowPass" />
+            <label for="rdShowPass">Show Password</label>
+          </div>
+          <button id="btnNext4" class="btn">
+            Sign Up <i class="icon-keyboard_arrow_right"></i>
+          </button>
+          <h5>Step 4 of 4</h5>
+        </div>
+      </div>
+      <span class="cna">
+        <a href="login.html">Already Have an account? Login in</a>
+      </span>
+    </div>
+    <script>
+      /* Variable Initialization */
+      const st1 = document.querySelector("#st1");
+      const st2 = document.querySelector("#st2");
+      const st3_1 = document.querySelector("#st3_1"); // For Phone Number OTP Page
+      const st3_2 = document.querySelector("#st3_2"); // For Email Registration Page
+      const st4 = document.querySelector("#st4");
+      /* Buttons */
+      const btnNext1 = document.querySelector("#btnNext1");
+      const btnNext2 = document.querySelector("#btnNext2");
+      const btnNext3_1 = document.querySelector("#btnNext3_1");
+      const btnNext3_2 = document.querySelector("#btnNext3_2");
+      const btnNext4 = document.querySelector("#btnNext4");
+      /* Texts */
+      const txtName = document.querySelector("#txtName");
+      const txtPhone = document.querySelector("#txtPhone");
+      const txtEmail = document.querySelector("#txtEmail");
+      const txtOTP = document.querySelector("#txtOTP");
+      const txtCode = document.querySelector("#txtCode");
+      const txtPass = document.querySelector("#txtPass");
+      const txtPassCon = document.querySelector("#txtPassCon");
+      /* Display Texts */
+      const phoneDisplay = document.querySelector("#phoneDisplay");
+      const emailDisplay = document.querySelector("#emailDisplay");
+
+      /* Function for Initial Start */
+      const hideAllST = () => {
+        st1.style.display = "none";
+        st2.style.display = "none";
+        st3_1.style.display = "none";
+        st3_2.style.display = "none";
+        st4.style.display = "none";
+      };
+
+      /* Function for Change Email / Phone Number */
+      const chngCred = () => {
+        hideAllST();
+        st2.style.display = "flex";
+      };
+      /* Function for Showing Password */
+      const showPassword = () => {
+        if (txtPass.type === "password" && txtPassCon.type === "password") {
+          txtPass.type = "text";
+          txtPassCon.type = "text";
+        } else {
+          txtPass.type = "password";
+          txtPassCon.type = "password";
+        }
+      };
+
+      hideAllST();
+      st1.style.display = "flex";
+
+      /* Phone or Email */
+      txtPhone.addEventListener("input", () => {
+        if (txtPhone.value.length > 0) {
+          txtEmail.disabled = true;
+        } else if (txtPhone.value.length == 0) {
+          txtEmail.disabled = false;
+        }
+      });
+      txtEmail.addEventListener("input", () => {
+        if (txtEmail.value.length > 0) {
+          txtPhone.disabled = true;
+        } else if (txtPhone.value.length == 0) {
+          txtPhone.disabled = false;
+        }
+      });
+
+      /* Button Click Function */
+      btnNext1.addEventListener("click", () => {
+        if (txtName.value === " " || txtName.value === "") {
+          alert("Please Enter the Full Name");
+        } else {
+          hideAllST();
+          st2.style.display = "flex";
+        }
+      });
+      btnNext2.addEventListener("click", () => {
+        if (txtPhone.value.length > 0) {
+          hideAllST();
+          st3_1.style.display = "flex";
+          phoneDisplay.innerHTML = "+91 " + txtPhone.value;
+        } else if (txtEmail.value.length > 0) {
+          hideAllST();
+          emailDisplay.innerHTML = txtEmail.value;
+          st3_2.style.display = "flex";
+        } else {
+          alert("Please Enter any one of the Following...");
+        }
+      });
+      btnNext3_1.addEventListener("click", () => {
+        if (document.querySelector("#txtOTP").value == "123456") {
+          hideAllST();
+          st4.style.display = "flex";
+        } else {
+          alert("Invalid OTP");
+        }
+      });
+      btnNext3_2.addEventListener("click", () => {
+        if (document.querySelector("#txtCode").value == "123456") {
+          hideAllST();
+          st4.style.display = "flex";
+        } else {
+          alert("Invalid Code");
+        }
+      });
+      btnNext4.addEventListener("click", () => {
+        if (
+          document.querySelector("#txtPassCon").value ==
+          document.querySelector("#txtPass").value
+        ) {
+          alert("Account Created Successfully..");
+          window.location.href = "index.html";
+        } else if (
+          document.querySelector("#txtPassCon").value == "" ||
+          document.querySelector("#txtPass").value == "" ||
+          document.querySelector("#txtPassCon").value == " " ||
+          document.querySelector("#txtPass").value == " "
+        ) {
+        } else {
+          alert("Password Didn't Match");
+        }
+      });
+      /* Button Click Function End */
+    </script>
+  </body>
+</html>

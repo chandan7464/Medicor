@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medicor | Login</title>
+    <link rel="stylesheet" href="stylesheet/v1.css" />
+  </head>
+  <body class="log">
+    <header>
+      <h1>Medicor.</h1>
+    </header>
+    <div class="loginContainer">
+      <form>
+        <h3>Login In</h3>
+        <label for="txtUsername">Phone Number :</label>
+        <input
+          type="tel"
+          class="txt"
+          id="txtUsername"
+          autocomplete="off"
+          placeholder="eg. 7005123543"
+          maxlength="10"
+          required
+        />
+        <label for="txtUsername">Password :</label>
+        <input
+          type="password"
+          class="txt"
+          id="txtPassword"
+          placeholder="Enter your Password"
+          required
+        />
+        <button type="submit" class="btn">Login</button>
+        <span><a href="forgotPassword.html">Forgot Password?</a></span>
+      </form>
+      <span class="cna"
+        ><a href="register.html">Don't Have any account? Create now</a></span
+      >
+      <script>
+        document.querySelector("form").addEventListener("submit", (e) => {
+          e.preventDefault();
+          if (
+            document.getElementById("txtUsername").value === "8787654321" &&
+            document.getElementById("txtPassword").value === "admin"
+          ) {
+            window.location.href = "dashboard.html";
+          } else {
+            alert("Credentials Error !");
+          }
+        });
+      </script>
+    </div>
+  </body>
+</html>

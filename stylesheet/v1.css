@@ -1,0 +1,1183 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Mulish", "Poppins", "Roboto", sans-serif;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background-color: #eaeaea;
+}
+
+i {
+  color: #252525;
+  font-size: 1.2rem;
+}
+
+.dflex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.splashScreen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.splashScreen ion-icon {
+  margin-right: 0.5rem;
+  -webkit-animation: loading 2s infinite;
+          animation: loading 2s infinite;
+}
+
+@-webkit-keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.log header {
+  background-color: #f8f8f8;
+  height: 80px;
+  -webkit-box-shadow: 2px 2px 30px -10px #00000027;
+          box-shadow: 2px 2px 30px -10px #00000027;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 10%;
+}
+
+.log header h1 {
+  color: #149c7c;
+  font-weight: 800;
+}
+
+.txt {
+  all: unset;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-bottom: 1rem;
+  background-color: #e9e9e9;
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #252525;
+  border-radius: 3pt;
+  border: 2pt solid #00000000;
+  -webkit-transition: border-color 200ms ease;
+  transition: border-color 200ms ease;
+}
+
+.txt:hover {
+  border: 2pt solid #0000002c;
+}
+
+.txt:focus {
+  border: 2pt solid #00000048;
+}
+
+.txt::-webkit-input-placeholder {
+  opacity: 0.3;
+}
+
+.txt:-ms-input-placeholder {
+  opacity: 0.3;
+}
+
+.txt::-ms-input-placeholder {
+  opacity: 0.3;
+}
+
+.txt::placeholder {
+  opacity: 0.3;
+}
+
+.txt:disabled {
+  opacity: 0.8;
+}
+
+.txt:disabled:hover {
+  border: 2pt solid #00000000;
+}
+
+.btn {
+  all: unset;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1rem 2rem;
+  background-color: #149c7c;
+  color: #ffffff;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 3pt;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 1rem;
+  -webkit-transition: background-color 400ms ease;
+  transition: background-color 400ms ease;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: #0e6f58;
+}
+
+.btn:focus {
+  background-color: #0b5846;
+}
+
+.btn:active {
+  -webkit-transform: translateY(1.5px);
+          transform: translateY(1.5px);
+}
+
+.loginContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: transparent;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 5rem 0;
+}
+
+.loginContainer form {
+  width: 360px;
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem;
+  border-radius: 3pt;
+  -webkit-box-shadow: 0px 10px 20px -5px #00000023;
+          box-shadow: 0px 10px 20px -5px #00000023;
+}
+
+.loginContainer form h3 {
+  margin-bottom: 2rem;
+  font-weight: 900;
+  color: #535353;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+.loginContainer form h3::after {
+  content: "";
+  display: block;
+  width: 40pt;
+  height: 4.5pt;
+  background-color: #139778;
+  opacity: 0.5;
+  border-radius: 3pt;
+}
+
+.loginContainer form input {
+  width: 300px;
+}
+
+.loginContainer form label {
+  color: #6b6b6b;
+  margin-left: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.loginContainer form button {
+  margin-top: 1rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.loginContainer form button i {
+  color: #ffffff;
+  font-size: 1.2rem;
+  -webkit-transform: translate(2px, 0px);
+          transform: translate(2px, 0px);
+}
+
+.loginContainer form span {
+  text-align: right;
+  font-size: 0.8rem;
+  margin-top: 0.6rem;
+}
+
+.loginContainer form span a {
+  color: #606060;
+}
+
+.loginContainer form .contentChangeable {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.loginContainer form .contentChangeable h4 {
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  background-color: transparent;
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  -ms-grid-columns: 1fr 50px 1fr;
+      grid-template-columns: 1fr 50px 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #656565;
+}
+
+.loginContainer form .contentChangeable h4::before {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #33333327;
+}
+
+.loginContainer form .contentChangeable h4::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #33333327;
+}
+
+.loginContainer form .contentChangeable p {
+  font-weight: 700;
+  color: #404040;
+  font-size: 0.8rem;
+  text-align: left;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+
+.loginContainer form .contentChangeable p strong {
+  font-weight: 800;
+  color: #303030;
+}
+
+.loginContainer form .contentChangeable ul {
+  font-weight: 700;
+  color: #404040;
+  font-size: 0.8rem;
+  text-align: left;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  margin-left: 2.2rem;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  opacity: 0.8;
+}
+
+.loginContainer form .contentChangeable ul li {
+  margin-top: 0.5rem;
+}
+
+.loginContainer form .contentChangeable a {
+  font-weight: 700;
+  color: #404040;
+  font-size: 0.8rem;
+  text-align: left;
+  width: 90%;
+  text-decoration: underline;
+  margin: 0.2rem auto;
+  text-align: left;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.loginContainer form .contentChangeable a:last-child {
+  margin-bottom: 0.5rem;
+}
+
+.loginContainer form .contentChangeable .showPass {
+  width: 90%;
+  margin: 0.6rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: left;
+  background-color: transparent;
+}
+
+.loginContainer form .contentChangeable .showPass input {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0.5rem;
+}
+
+.loginContainer form .contentChangeable .showPass input[type="checkbox"] {
+  position: absolute;
+  left: -9999999%;
+  opacity: 0;
+}
+
+.loginContainer form .contentChangeable .showPass label {
+  margin: 0;
+  font-size: 0.9rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.loginContainer form .contentChangeable .showPass label::before {
+  position: absolute;
+  left: 0;
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  margin-right: 0.8rem;
+  background-color: #00000027;
+  opacity: 0.5;
+  border: 2px solid #00000013;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.loginContainer form .contentChangeable .showPass input[type="checkbox"]:checked + label::before {
+  border-left: 0px;
+  border-top: 0;
+  background-color: transparent;
+  border-color: #149c7c;
+  border-radius: 0;
+  width: 8px;
+  height: 18px;
+  -webkit-transform: rotate(40deg) translate(4px, -8px);
+          transform: rotate(40deg) translate(4px, -8px);
+  opacity: 1;
+}
+
+.loginContainer form #st1 {
+  display: none;
+}
+
+.loginContainer form #st2 {
+  display: none;
+}
+
+.loginContainer form #st3_1 {
+  display: none;
+}
+
+.loginContainer form #st3_2 {
+  display: none;
+}
+
+.loginContainer form #st4 {
+  display: none;
+}
+
+.loginContainer .form {
+  width: 360px;
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem;
+  border-radius: 3pt;
+  -webkit-box-shadow: 0px 10px 20px -5px #00000023;
+          box-shadow: 0px 10px 20px -5px #00000023;
+}
+
+.loginContainer .form h3 {
+  margin-bottom: 2rem;
+  font-weight: 900;
+  color: #535353;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+.loginContainer .form h3::after {
+  content: "";
+  display: block;
+  width: 40pt;
+  height: 4.5pt;
+  background-color: #139778;
+  opacity: 0.5;
+  border-radius: 3pt;
+}
+
+.loginContainer .form input {
+  width: 300px;
+}
+
+.loginContainer .form label {
+  color: #6b6b6b;
+  margin-left: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.loginContainer .form button {
+  margin-top: 1rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.loginContainer .form button i {
+  color: #ffffff;
+  font-size: 1.2rem;
+  -webkit-transform: translate(2px, 0px);
+          transform: translate(2px, 0px);
+}
+
+.loginContainer .form span {
+  text-align: right;
+  font-size: 0.8rem;
+  margin-top: 0.6rem;
+}
+
+.loginContainer .form span a {
+  color: #606060;
+}
+
+.loginContainer .form .contentChangeable {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.loginContainer .form .contentChangeable h4 {
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  background-color: transparent;
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  -ms-grid-columns: 1fr 50px 1fr;
+      grid-template-columns: 1fr 50px 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #656565;
+}
+
+.loginContainer .form .contentChangeable h4::before {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #33333327;
+}
+
+.loginContainer .form .contentChangeable h4::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #33333327;
+}
+
+.loginContainer .form .contentChangeable p {
+  font-weight: 700;
+  color: #404040;
+  font-size: 0.8rem;
+  text-align: left;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+
+.loginContainer .form .contentChangeable p strong {
+  font-weight: 800;
+  color: #303030;
+}
+
+.loginContainer .form .contentChangeable ul {
+  font-weight: 700;
+  color: #404040;
+  font-size: 0.8rem;
+  text-align: left;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  margin-left: 2.2rem;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  opacity: 0.8;
+}
+
+.loginContainer .form .contentChangeable ul li {
+  margin-top: 0.5rem;
+}
+
+.loginContainer .form .contentChangeable a {
+  font-weight: 700;
+  color: #404040;
+  font-size: 0.8rem;
+  text-align: left;
+  width: 90%;
+  text-decoration: underline;
+  margin: 0.2rem auto;
+  text-align: left;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.loginContainer .form .contentChangeable a:last-child {
+  margin-bottom: 0.5rem;
+}
+
+.loginContainer .form .contentChangeable .showPass {
+  width: 90%;
+  margin: 0.6rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: left;
+  background-color: transparent;
+}
+
+.loginContainer .form .contentChangeable .showPass input {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0.5rem;
+}
+
+.loginContainer .form .contentChangeable .showPass input[type="checkbox"] {
+  position: absolute;
+  left: -9999999%;
+  opacity: 0;
+}
+
+.loginContainer .form .contentChangeable .showPass label {
+  margin: 0;
+  font-size: 0.9rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.loginContainer .form .contentChangeable .showPass label::before {
+  position: absolute;
+  left: 0;
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  margin-right: 0.8rem;
+  background-color: #00000027;
+  opacity: 0.5;
+  border: 2px solid #00000013;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.loginContainer .form .contentChangeable .showPass input[type="checkbox"]:checked + label::before {
+  border-left: 0px;
+  border-top: 0;
+  background-color: transparent;
+  border-color: #149c7c;
+  border-radius: 0;
+  width: 8px;
+  height: 18px;
+  -webkit-transform: rotate(40deg) translate(4px, -8px);
+          transform: rotate(40deg) translate(4px, -8px);
+  opacity: 1;
+}
+
+.loginContainer .form .contentChangeable h5 {
+  margin-top: 1.4rem;
+  color: #606060;
+}
+
+.loginContainer .form #st1 {
+  display: none;
+}
+
+.loginContainer .form #st2 {
+  display: none;
+}
+
+.loginContainer .form #st3_1 {
+  display: none;
+}
+
+.loginContainer .form #st3_2 {
+  display: none;
+}
+
+.loginContainer .form #st4 {
+  display: none;
+}
+
+.loginContainer .cna {
+  margin-top: 1.2rem;
+  text-align: center;
+}
+
+.loginContainer .cna a {
+  color: #11856a;
+  text-decoration: none;
+  position: relative;
+  font-weight: 600;
+}
+
+.loginContainer .cna a::before {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 5pt;
+  background-color: #139778;
+  opacity: 0.25;
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+  -webkit-transition: width 400ms ease-in-out;
+  transition: width 400ms ease-in-out;
+}
+
+.loginContainer .cna a:hover::before, .loginContainer .cna a:focus::before {
+  width: 100%;
+}
+
+.loginContainer .cna .gback {
+  padding: 1rem 0;
+}
+
+@media (max-width: 530px) {
+  .loginContainer .form {
+    width: 80%;
+  }
+  .loginContainer .form input {
+    width: 100%;
+    padding: 0.8rem 1.2rem;
+  }
+  .loginContainer form {
+    width: 80%;
+  }
+  .loginContainer form input {
+    width: 100%;
+    padding: 0.8rem 1.2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  body {
+    font-size: 0.8rem;
+  }
+  .loginContainer {
+    padding: 2rem 0;
+  }
+  .loginContainer .form {
+    background-color: transparent;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    width: 100%;
+  }
+  .loginContainer .form .txt {
+    background-color: #d4d4d4;
+  }
+  .loginContainer .form .btn {
+    margin-top: 2.4rem;
+  }
+  .loginContainer form {
+    background-color: transparent;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    width: 100%;
+  }
+  .loginContainer form .txt {
+    background-color: #d4d4d4;
+  }
+  .loginContainer form .btn {
+    margin-top: 2.4rem;
+  }
+  .loginContainer .cna {
+    width: 80%;
+  }
+  .loginContainer .cna::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 0.5pt;
+    background-color: #0000001f;
+    margin-bottom: 1rem;
+  }
+}
+
+.dashboard {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 270px 1fr;
+      grid-template-columns: 270px 1fr;
+  background-color: #f4faf9;
+  height: 100vh;
+  overflow: hidden;
+  /* Main Section */
+}
+
+.dashboard aside {
+  z-index: 20;
+  overflow-y: scroll;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  -webkit-box-shadow: 15px 0px 66px -47px #0000002a;
+          box-shadow: 15px 0px 66px -47px #0000002a;
+  padding: 0.8rem;
+  padding-bottom: 2rem;
+}
+
+.dashboard aside::-webkit-scrollbar {
+  width: 6px;
+  height: 0;
+  background-color: transparent;
+  border-radius: 20pt;
+  visibility: hidden;
+}
+
+.dashboard aside::-webkit-scrollbar-thumb {
+  background-color: #149c7c50;
+  border-radius: 20pt;
+  visibility: hidden;
+  -webkit-transition: visibility 0.4s ease;
+  transition: visibility 0.4s ease;
+}
+
+.dashboard aside:hover::-webkit-scrollbar-thumb {
+  visibility: visible;
+}
+
+.dashboard aside header {
+  background-color: transparent;
+  margin-bottom: 3rem;
+}
+
+.dashboard aside header h1 {
+  background-color: transparent;
+  color: #149c7c;
+  font-size: 2.1rem;
+  font-weight: 800;
+  padding: 1rem;
+}
+
+.dashboard aside .menuContainer .menuItem {
+  width: 240px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  border-radius: 8pt;
+  color: #adadad;
+  background-color: transparent;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.dashboard aside .menuContainer .menuItem i {
+  color: #adadad;
+  margin-right: 1rem;
+  font-size: 2rem;
+  -webkit-transition: -webkit-transform 150ms ease-out;
+  transition: -webkit-transform 150ms ease-out;
+  transition: transform 150ms ease-out;
+  transition: transform 150ms ease-out, -webkit-transform 150ms ease-out;
+}
+
+.dashboard aside .menuContainer .menuItem:hover i {
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+}
+
+.dashboard aside .menuContainer .menuItem .moreOption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.dashboard aside .menuContainer .menuItem .moreOption ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateX(0) translateY(30px);
+          transform: translateX(0) translateY(30px);
+  list-style-type: none;
+  background-color: #ffffff;
+  min-width: 180px;
+  padding: 0.5rem;
+  border-radius: 3pt;
+}
+
+.dashboard aside .menuContainer .menuItem .moreOption ul li {
+  padding: 0.2rem 0.5rem;
+}
+
+.dashboard aside .menuContainer .active {
+  background-color: #edf7f5;
+  color: #149c7c;
+  -webkit-transition: background-color 400ms ease-in-out;
+  transition: background-color 400ms ease-in-out;
+}
+
+.dashboard aside .menuContainer .active i {
+  color: #149c7c;
+}
+
+.dashboard aside .menuContainer .active:hover i {
+  -webkit-transform: none;
+          transform: none;
+}
+
+.dashboard main {
+  width: 100%;
+  background-color: transparent;
+}
+
+.dashboard main .header {
+  background-color: transparent;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 200px;
+      grid-template-columns: 1fr 200px;
+  grid-gap: 2rem;
+  padding: 1rem 2rem;
+}
+
+.dashboard main .header .inputContainer {
+  width: 100%;
+  background-color: #e6f2ef;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.8rem 1rem;
+  border-radius: 5pt;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition: background-color 0.2s ease, -webkit-box-shadow 0.2s ease;
+  transition: background-color 0.2s ease, -webkit-box-shadow 0.2s ease;
+  transition: box-shadow 0.2s ease, background-color 0.2s ease;
+  transition: box-shadow 0.2s ease, background-color 0.2s ease, -webkit-box-shadow 0.2s ease;
+}
+
+.dashboard main .header .inputContainer i {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: text;
+  color: #000000;
+  opacity: 0.4;
+  font-size: 1.2rem;
+}
+
+.dashboard main .header .inputContainer input {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  all: unset;
+  padding: 0.2rem 0.8rem;
+  background-color: transparent;
+  font-size: 1.1rem;
+  color: #606060;
+  font-weight: 700;
+  background-color: transparent;
+  width: 100%;
+}
+
+.dashboard main .header .inputContainer input::-webkit-input-placeholder {
+  opacity: 0.4;
+  color: #000000;
+}
+
+.dashboard main .header .inputContainer input:-ms-input-placeholder {
+  opacity: 0.4;
+  color: #000000;
+}
+
+.dashboard main .header .inputContainer input::-ms-input-placeholder {
+  opacity: 0.4;
+  color: #000000;
+}
+
+.dashboard main .header .inputContainer input::placeholder {
+  opacity: 0.4;
+  color: #000000;
+}
+
+.dashboard main .header .inputContainer:focus-within {
+  background-color: #ffffff60;
+  -webkit-box-shadow: 0px 25px 20px -10px #00000010, 0px -5px 20px -5px #00000018;
+          box-shadow: 0px 25px 20px -10px #00000010, 0px -5px 20px -5px #00000018;
+}
+
+.dashboard main .header .actionContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dashboard main .header .actionContainer button {
+  all: unset;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 1000px) {
+  .dashboard {
+    -ms-grid-columns: 73px 1fr;
+        grid-template-columns: 73px 1fr;
+  }
+  .dashboard aside {
+    -webkit-transition: width 400ms ease 200ms;
+    transition: width 400ms ease 200ms;
+  }
+  .dashboard aside header {
+    -webkit-transform: rotateZ(-90deg) translate(-60px, 0);
+            transform: rotateZ(-90deg) translate(-60px, 0);
+    -webkit-transition: -webkit-transform 400ms ease 200ms;
+    transition: -webkit-transform 400ms ease 200ms;
+    transition: transform 400ms ease 200ms;
+    transition: transform 400ms ease 200ms, -webkit-transform 400ms ease 200ms;
+  }
+  .dashboard aside header h1 {
+    font-size: 1.4rem;
+    -webkit-transition: font-size 400ms ease 200ms;
+    transition: font-size 400ms ease 200ms;
+  }
+  .dashboard aside .menuContainer {
+    margin-top: 5rem;
+  }
+  .dashboard aside:hover {
+    width: 270px;
+  }
+  .dashboard aside:hover > header {
+    -webkit-transform: none;
+            transform: none;
+  }
+  .dashboard aside:hover > header h1 {
+    font-size: 2.1rem;
+  }
+}
+/*# sourceMappingURL=v1.css.map */
