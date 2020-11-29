@@ -1,0 +1,28 @@
+<h2>Add Staff</h2>
+<h4>
+  Your staff will be able to access certain features from admin dashboard.
+</h4>
+<form id="frmStaff">
+  <label for="txtStaffName">Staff Name :</label>
+  <input
+    type="text"
+    class="txt"
+    id="txtStaffName"
+    placeholder="eg. John Doe"
+    autocomplete="off"
+    required
+  />
+  <label for="txtStaffPhone">Staff Phone Number :</label>
+  <input
+    type="tel"
+    class="txt"
+    id="txtStaffPhone"
+    maxlength="10"
+    placeholder="eg. 8787426534"
+    autocomplete="off"
+    required
+  />
+  <p class="downTxt">** You can add more Staff later</p>
+  <button class="btn btn-sm" type="submit">Add Staff</button>
+  <a onclick="reDirect('#!/complete')" class="skip">Skip for now</a>
+</form>

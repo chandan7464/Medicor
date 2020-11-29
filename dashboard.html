@@ -4,64 +4,49 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Medicor | Dashboard</title>
-    <link rel="stylesheet" href="stylesheet/v1.css" />
     <link rel="stylesheet" href="stylesheet/Material_Icons/style.css" />
+    <link rel="stylesheet" href="stylesheet/v1.css" />
   </head>
-  <body class="dashboard">
+  <body class="dashboard" ng-app="dashboardApp">
     <aside>
       <header>
         <h1>Medicor.</h1>
       </header>
       <section class="menuContainer">
-        <p class="menuItem">
+        <p class="menuItem active" onclick="reDirect('#!/')">
           <i class="icon-home"></i>
           Home
         </p>
-        <p class="menuItem active">
+        <p class="menuItem" onclick="reDirect('#!/queue')">
           <i class="icon-date_range"></i>
           Queue
         </p>
-        <div class="menuItem">
+        <div class="menuItem" onclick="reDirect('#!/appointment')">
           <i class="icon-access_time"></i>
           Appointments
         </div>
-        <p class="menuItem">
+        <p class="menuItem" onclick="reDirect('#!/patients')">
           <i class="icon-accessible"></i>
           Patients
         </p>
-        <p class="menuItem">
+        <p class="menuItem" onclick="reDirect('#!/business')">
           <i class="icon-bar_chart"></i>
           Business
         </p>
-        <p class="menuItem">
+        <p class="menuItem" onclick="reDirect('#!/settings')">
           <i class="icon-settings"></i>
           Settings
         </p>
-        <p class="menuItem">
+        <p class="menuItem" onclick="reDirect('#!/help')">
           <i class="icon-help"></i>
           Help
         </p>
       </section>
     </aside>
-    <main>
-      <div class="header">
-        <div class="inputContainer">
-          <label for="txtSeachAllItems">
-            <i class="icon-search"></i>
-          </label>
-          <input
-            type="text"
-            id="txtSeachAllItems"
-            placeholder="Search Here"
-            required
-          />
-        </div>
-        <!-- <div class="actionContainer">
-          <button><i class="icon-notifications"></i></button>
-          <button>Carl Jonson <i class="icon-keyboard_arrow_down"></i></button>
-        </div> -->
-      </div>
-    </main>
-    <script></script>
+    <main ng-view></main>
+    <script src="js/angularjs/angular.min.js"></script>
+    <script src="js/angularjs/angular-router.min.js"></script>
+    <script src="js/v1.js"></script>
+    <script src="js/dashboard.js"></script>
   </body>
 </html>
