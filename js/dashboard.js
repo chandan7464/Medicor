@@ -49,30 +49,23 @@ mainApp.config(function ($routeProvider) {
 
 mainApp
   .controller("getStartedCtrl", function () {
-    console.log("Home");
     activeMenu(1);
   })
   .controller("queueCtrl", function () {
-    console.log("queueCtrl");
     activeMenu(2);
   })
   .controller("appointmentCtrl", function () {
-    console.log("appointmentCtrl");
     activeMenu(3);
   })
   .controller("patientsCtrl", function () {
-    console.log("patientsCtrl");
     activeMenu(4);
   })
   .controller("businessCtrl", function () {
-    console.log("businessCtrl");
     activeMenu(5);
   })
   .controller("settingsCtrl", function () {
-    console.log("settingsCtrl");
-    activeMenu(6);  
+    activeMenu(6);
   })
   .controller("helpCtrl", function () {
-    console.log("helpCtrl");
     activeMenu(7);
   });

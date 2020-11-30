@@ -11,10 +11,15 @@
 
 body {
   background-color: #eaeaea;
+  color: #404040;
+}
+
+hr {
+  opacity: 0.3;
 }
 
 i {
-  color: #252525;
+  color: #404040;
   font-size: 1.2rem;
 }
 
@@ -28,6 +33,120 @@ i {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.txtControl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.txtControl label {
+  margin: 0.4rem 0.8rem;
+  font-weight: 700;
+  opacity: 0.8;
+}
+
+.formFill .grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(200px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.formFill .txt::-webkit-input-placeholder {
+  opacity: 0.6;
+}
+
+.formFill .txt:-ms-input-placeholder {
+  opacity: 0.6;
+}
+
+.formFill .txt::-ms-input-placeholder {
+  opacity: 0.6;
+}
+
+.formFill .txt::placeholder {
+  opacity: 0.6;
+}
+
+.formFill .btn {
+  margin-top: 1rem;
+}
+
+.frmControl {
+  padding: 0 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.frmControl label {
+  margin: 0.4rem 1rem;
+  font-weight: 800;
+  opacity: 0.8;
+}
+
+.frmControl .dflex {
+  gap: 1rem;
+}
+
+.frmControl .txt {
+  margin: 0;
+}
+
+.frmControl .txt::-webkit-input-placeholder {
+  opacity: 0.6;
+}
+
+.frmControl .txt:-ms-input-placeholder {
+  opacity: 0.6;
+}
+
+.frmControl .txt::-ms-input-placeholder {
+  opacity: 0.6;
+}
+
+.frmControl .txt::placeholder {
+  opacity: 0.6;
+}
+
+.frmControl select {
+  min-width: 220px;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.frmControl select:disabled {
+  opacity: 0.2;
+}
+
+.frmControl small {
+  opacity: 0.7;
+  margin-top: 0.5rem;
 }
 
 .splashScreen {
@@ -88,7 +207,7 @@ i {
   padding: 0.8rem 1.2rem;
   font-size: 1rem;
   font-weight: 600;
-  color: #252525;
+  color: #404040;
   border-radius: 3pt;
   border: 2pt solid #00000000;
   -webkit-transition: border-color 200ms ease;
@@ -163,6 +282,30 @@ i {
   padding: 0.8rem 1.2rem;
 }
 
+.btn-dark {
+  background-color: #404040;
+}
+
+.btn-dark:hover {
+  background-color: #353535;
+}
+
+.btn-dark:focus {
+  background-color: #303030;
+}
+
+.floatLeft {
+  float: left;
+}
+
+.floatRight {
+  float: right;
+}
+
+.txt-sm {
+  padding: 0.6rem 1rem;
+}
+
 .f-end {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -234,6 +377,37 @@ abbr {
   color: #bb0a0a !important;
   margin: 0 !important;
   padding: 0 !important;
+}
+
+.txtWrap1 {
+  width: var(--wrWidth);
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.frm_a {
+  width: 100%;
+  color: #0e6f58;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.frmHeading {
+  font-weight: 800;
+}
+
+.frmHeading::after {
+  content: "";
+  display: block;
+  width: 40pt;
+  height: 5pt;
+  background-color: #149c7c;
+  opacity: 0.9;
+  border-radius: 3pt;
 }
 
 .loginContainer {
@@ -1259,6 +1433,7 @@ abbr {
 }
 
 .dashboard aside {
+  overflow-x: hidden;
   z-index: 20;
   overflow-y: scroll;
   width: 100%;
@@ -1442,5 +1617,1010 @@ abbr {
   .dashboard aside:hover > header h1 {
     font-size: 2.1rem;
   }
+}
+
+.content {
+  padding: 1.5rem 2rem;
+  width: 100%;
+}
+
+.clinic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: #149c7c;
+  background: -webkit-gradient(linear, left bottom, right top, from(#149c7cf5), to(#158369f5)), url("../resources/abstBack.svg");
+  background: linear-gradient(to right top, #149c7cf5, #158369f5), url("../resources/abstBack.svg");
+  padding: 2rem;
+}
+
+.clinic h1 {
+  width: 100%;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 1.2rem;
+  letter-spacing: 0.2px;
+}
+
+.clinic .clinicContainer {
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(180px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 3rem;
+}
+
+.clinic .clinicContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.clinic .clinicContainer .cItems {
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #ffffff;
+  border-radius: 6pt;
+  padding: 1rem;
+  width: 180px;
+  height: 180px;
+  -webkit-box-shadow: 0 15px 20px -10px #00000077;
+          box-shadow: 0 15px 20px -10px #00000077;
+  -webkit-transition: -webkit-transform 200ms ease, -webkit-box-shadow 200ms ease;
+  transition: -webkit-transform 200ms ease, -webkit-box-shadow 200ms ease;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+  transition: transform 200ms ease, box-shadow 200ms ease, -webkit-transform 200ms ease, -webkit-box-shadow 200ms ease;
+}
+
+.clinic .clinicContainer .cItems img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: 100%;
+  height: 120px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  background-color: #ededed;
+  border-radius: 6pt;
+}
+
+.clinic .clinicContainer .cItems p {
+  text-align: center;
+  width: 100%;
+  font-weight: 800;
+  margin-top: 0.5rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-size: 0.9rem;
+}
+
+.clinic .clinicContainer .cItems:hover {
+  -webkit-transform: translateY(-4px);
+          transform: translateY(-4px);
+  -webkit-box-shadow: 0 18px 28px -6px #00000077;
+          box-shadow: 0 18px 28px -6px #00000077;
+}
+
+.clinic .clinicContainer .cItems:active {
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+  -webkit-box-shadow: 0 10px 20px -10px #00000052;
+          box-shadow: 0 10px 20px -10px #00000052;
+  -webkit-transition: none;
+  transition: none;
+}
+
+.clinic .clinicContainer .newAdd {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  background-color: #1e7963a1;
+}
+
+.clinic .clinicContainer .newAdd:hover {
+  -webkit-transform: none;
+          transform: none;
+}
+
+.clinic .clinicContainer .newAdd:active {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.clinic .clinicContainer .newAdd .icon {
+  color: #ffffff;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.clinic .clinicContainer .newAdd .icon i {
+  font-size: 3rem;
+  color: #ffffff;
+}
+
+.clinic .clinicContainer .newAdd .icon p {
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.dashboard .content {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding-bottom: 0;
+  overflow: hidden;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.dashboard .content::-webkit-scrollbar {
+  width: 8px;
+  height: 0;
+  background-color: transparent;
+  visibility: hidden;
+}
+
+.dashboard .content::-webkit-scrollbar-thumb {
+  background-color: #149c7c;
+  border-radius: 0;
+  visibility: hidden;
+  -webkit-transition: visibility 0.4s ease;
+  transition: visibility 0.4s ease;
+}
+
+.dashboard .content:hover::-webkit-scrollbar-thumb {
+  visibility: visible;
+}
+
+.getStarted {
+  background-color: transparent;
+}
+
+.getStarted header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+  margin-bottom: 2.2rem;
+}
+
+.getStarted header .intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.getStarted header .intro h4 {
+  line-height: 14px;
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+  font-size: 1.1rem;
+  opacity: 0.8;
+}
+
+.getStarted header .intro h2 {
+  font-weight: 900;
+  font-size: 1.8rem;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.getStarted header .interect {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.getStarted header .interect .searchBox {
+  overflow: hidden;
+  border-radius: 6pt;
+  background-color: #00000004;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.getStarted header .interect .searchBox label {
+  height: 40px;
+  width: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 6pt;
+  background-color: #00000010;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.getStarted header .interect .searchBox label i {
+  font-size: 1.3rem;
+  color: #5a5a5ac0;
+}
+
+.getStarted header .interect .searchBox input[type="text"] {
+  all: unset;
+  padding: 0.4rem 0.8rem;
+  background-color: transparent;
+  color: #4e4e4e;
+  font-weight: 700;
+  width: 160px;
+  font-size: 0.9rem;
+  -webkit-transition: width 200ms ease-out;
+  transition: width 200ms ease-out;
+}
+
+.getStarted header .interect .searchBox input[type="text"]::-webkit-input-placeholder {
+  opacity: 0.5;
+}
+
+.getStarted header .interect .searchBox input[type="text"]:-ms-input-placeholder {
+  opacity: 0.5;
+}
+
+.getStarted header .interect .searchBox input[type="text"]::-ms-input-placeholder {
+  opacity: 0.5;
+}
+
+.getStarted header .interect .searchBox input[type="text"]::placeholder {
+  opacity: 0.5;
+}
+
+.getStarted header .interect .searchBox:focus-within {
+  background-color: #00000008;
+}
+
+.getStarted header .interect .searchBox:focus-within input[type="text"] {
+  width: 190px;
+}
+
+.getStarted header .interect button {
+  all: unset;
+  cursor: pointer;
+  margin-left: 1rem;
+  height: 40px;
+  width: 40px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #00000010;
+  border-radius: 6pt;
+}
+
+.getStarted header .interect button i {
+  color: #5a5a5a;
+  font-size: 1.3rem;
+}
+
+.getStarted header .interect button:nth-child(3) {
+  background-color: #149c7c1a;
+}
+
+.getStarted header .interect button:nth-child(3) i {
+  color: #149c7c;
+}
+
+@media (max-width: 860px) {
+  .getStarted header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .getStarted header .interect {
+    width: 100%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .getStarted header .interect .searchBox {
+    width: 85%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .getStarted header .interect .searchBox:focus-within {
+    background-color: #00000008;
+  }
+  .getStarted header .interect .searchBox:focus-within input[type="text"] {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+
+@media (max-width: 600px) {
+  .getStarted header .interect {
+    width: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr (40px)[2];
+        grid-template-columns: 1fr repeat(2, 40px);
+    gap: 1rem;
+  }
+  .getStarted header .interect .searchBox {
+    width: 100%;
+    min-width: 40px;
+  }
+  .getStarted header .interect .searchBox label {
+    min-width: 40px;
+  }
+  .getStarted header .interect button {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .getStarted header {
+    gap: 1rem;
+  }
+  .getStarted header .intro h4 {
+    font-size: 0.8rem;
+  }
+  .getStarted header .intro h2 {
+    font-size: 1.4rem;
+  }
+  .getStarted header .interect {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 2fr;
+        grid-template-columns: 2fr;
+        grid-template-areas: "btn1 btn2" "search search";
+  }
+  .getStarted header .interect .searchBox {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: search;
+  }
+  .getStarted header .interect button:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: btn1;
+  }
+  .getStarted header .interect button:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: btn2;
+  }
+}
+
+.getStarted .headItem {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  margin: 2rem 0;
+  gap: 1.5rem;
+}
+
+.getStarted .headItem .item {
+  background-color: #ebebeb;
+  padding: 1.2rem;
+  border-radius: 6pt;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.getStarted .headItem .item i {
+  background-color: #0000001e;
+  height: 60px;
+  width: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 1rem;
+  border-radius: 600pt;
+  font-size: 25pt;
+}
+
+.getStarted .headItem .item .textCon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.getStarted .headItem .item .textCon h4 {
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.getStarted .headItem .item .textCon p {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.getStarted .headItem .iOrange {
+  background-color: #f7ede8;
+  color: #f18b69;
+}
+
+.getStarted .headItem .iOrange i {
+  color: #f18b69;
+  background-color: #f8ded4;
+}
+
+.getStarted .headItem .iPurple {
+  background-color: #ebeaf7;
+  color: #9068e0;
+}
+
+.getStarted .headItem .iPurple i {
+  color: #9068e0;
+  background-color: #dad1f3;
+}
+
+.getStarted .headItem .iBlue {
+  background-color: #e5edf9;
+  color: #5d84f4;
+}
+
+.getStarted .headItem .iBlue i {
+  color: #5d84f4;
+  background-color: #cad9f8;
+}
+
+@media (max-width: 860px) {
+  .getStarted .headItem {
+    -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+  .getStarted .headItem .item {
+    padding: 0.8rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .getStarted .headItem {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.getStarted .statsContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 350px;
+      grid-template-columns: 1fr 350px;
+  -ms-grid-rows: 300px;
+      grid-template-rows: 300px;
+  gap: 2rem;
+}
+
+.getStarted .statsContainer .lineChartContainer {
+  background-color: #ffffff;
+  overflow: hidden;
+  border-radius: 6pt;
+  width: 100%;
+  -webkit-box-shadow: 5px 45px 80px -10px #00000015;
+          box-shadow: 5px 45px 80px -10px #00000015;
+}
+
+.getStarted .statsContainer .lineChartContainer img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.getStarted .statsContainer .lineChartContainer iframe {
+  height: 100%;
+  width: 100%;
+  background-color: red1;
+}
+
+.getStarted .statsContainer .lineChartContainer canvas {
+  padding: 2rem;
+}
+
+.getStarted .statsContainer .interectContainer {
+  width: 100%;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  gap: 0rem;
+}
+
+.getStarted .statsContainer .interectContainer .btnContainer {
+  all: unset;
+  cursor: pointer;
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 25px 28px -10px #00000011;
+          box-shadow: 0 25px 28px -10px #00000011;
+  padding: 0.8rem 1rem;
+  border-radius: 6pt;
+  -webkit-transition: -webkit-transform 200ms ease;
+  transition: -webkit-transform 200ms ease;
+  transition: transform 200ms ease;
+  transition: transform 200ms ease, -webkit-transform 200ms ease;
+}
+
+.getStarted .statsContainer .interectContainer .btnContainer i {
+  font-size: 2.2rem;
+  margin-right: 1rem;
+  height: 60px;
+  width: 60px;
+  background-color: #f1f1f1;
+  border-radius: 6pt;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.getStarted .statsContainer .interectContainer .btnContainer p {
+  font-weight: 800;
+  font-size: 1.12rem;
+}
+
+.getStarted .statsContainer .interectContainer .btnContainer:hover {
+  -webkit-transform: translateY(-4px);
+          transform: translateY(-4px);
+}
+
+.getStarted .statsContainer .interectContainer .btnContainer:active {
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+  -webkit-transition: -webkit-transform 0ms ease;
+  transition: -webkit-transform 0ms ease;
+  transition: transform 0ms ease;
+  transition: transform 0ms ease, -webkit-transform 0ms ease;
+}
+
+.getStarted .statsContainer .interectContainer .btnContainer:nth-child(1) {
+  color: #f18b69;
+}
+
+.getStarted .statsContainer .interectContainer .btnContainer:nth-child(1) i {
+  background-color: #f8ded4be;
+  color: #f18b69;
+}
+
+.getStarted .statsContainer .interectContainer .btnContainer:nth-child(2) {
+  color: #9068e0;
+}
+
+.getStarted .statsContainer .interectContainer .btnContainer:nth-child(2) i {
+  background-color: #ebeaf7;
+  color: #9068e0;
+}
+
+.getStarted .statsContainer .interectContainer .btnContainer:nth-child(3) {
+  color: #5d83f3;
+}
+
+.getStarted .statsContainer .interectContainer .btnContainer:nth-child(3) i {
+  background-color: #f0f4fe;
+  color: #5d83f3;
+}
+
+@media (max-width: 1200px) {
+  .getStarted .statsContainer {
+    -ms-grid-columns: 1fr 250px;
+        grid-template-columns: 1fr 250px;
+  }
+}
+
+@media (max-width: 950px) {
+  .getStarted .statsContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .getStarted .statsContainer .interectContainer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  .getStarted .statsContainer .interectContainer .btnContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  .getStarted .statsContainer .interectContainer .btnContainer i {
+    margin: 0;
+    width: 100%;
+    height: 80px;
+    font-size: 30pt;
+  }
+  .getStarted .statsContainer .interectContainer .btnContainer p {
+    font-size: 1rem;
+  }
+  .getStarted .statsContainer .interectContainer .btnContainer:hover {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  .getStarted .statsContainer .interectContainer .btnContainer:active {
+    -webkit-transform: translateY(3px);
+            transform: translateY(3px);
+    -webkit-transition: -webkit-transform 0ms ease;
+    transition: -webkit-transform 0ms ease;
+    transition: transform 0ms ease;
+    transition: transform 0ms ease, -webkit-transform 0ms ease;
+  }
+}
+
+@media (max-width: 600px) {
+  .getStarted .statsContainer .lineChartContainer {
+    height: 350px;
+  }
+  .getStarted .statsContainer .interectContainer {
+    gap: 1rem;
+  }
+  .getStarted .statsContainer .interectContainer .btnContainer i {
+    font-size: 20pt;
+  }
+  .getStarted .statsContainer .interectContainer .btnContainer p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .getStarted .statsContainer .interectContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .getStarted .statsContainer .interectContainer .btnContainer {
+    padding: 0.5rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .getStarted .statsContainer .interectContainer .btnContainer i {
+    width: 50px;
+    height: 50px;
+  }
+  .getStarted .statsContainer .interectContainer .btnContainer p {
+    text-align: left;
+  }
+}
+
+.getStarted .recentIllnessContainer {
+  margin: 2rem 0;
+  padding: 1rem 1.5rem;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 20px 40px -10px #0000001c;
+          box-shadow: 0 20px 40px -10px #0000001c;
+  border-radius: 6pt;
+}
+
+.getStarted .recentIllnessContainer h2 {
+  font-weight: 900;
+}
+
+.getStarted .recentIllnessContainer .itemContainer {
+  margin: 1.4rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(200px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.getStarted .recentIllnessContainer .itemContainer .item {
+  background-color: #ffffff;
+  color: #464646;
+  padding: 0.8rem 1rem;
+  border-radius: 6pt;
+  -webkit-box-shadow: 0px 18px 20px -8px #00000020, 0px -2px 10px #0000000e;
+          box-shadow: 0px 18px 20px -8px #00000020, 0px -2px 10px #0000000e;
+}
+
+.getStarted .recentIllnessContainer .itemContainer .item h4 {
+  color: #149c7c;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.getStarted .recentIllnessContainer .itemContainer .item p {
+  color: #4d4d4d;
+  font-weight: 600;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+@media (max-width: 500px) {
+  .getStarted .recentIllnessContainer h2 {
+    font-size: 1rem;
+  }
+  .getStarted .recentIllnessContainer .itemContainer {
+    margin: 1.4rem 0;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .getStarted .recentIllnessContainer .itemContainer .item {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    background-color: #f6f6f6;
+  }
+  .getStarted .recentIllnessContainer .itemContainer .item h4 {
+    font-size: 1rem;
+  }
+  .getStarted .recentIllnessContainer .itemContainer .item p {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .content {
+    padding: 1.5rem 1rem;
+  }
+  .content::-webkit-scrollbar {
+    display: none;
+  }
+  .getStarted .statsContainer {
+    height: 500px;
+  }
+  .getStarted .statsContainer img {
+    height: 100%;
+    -o-object-fit: cover !important;
+       object-fit: cover !important;
+    -o-object-position: left;
+       object-position: left;
+  }
+}
+
+@media (max-width: 400px) {
+  .dashboard {
+    -ms-grid-columns: 60px 1fr;
+        grid-template-columns: 60px 1fr;
+  }
+  .dashboard aside {
+    padding: 0.5rem;
+  }
+  .dashboard aside .menuContainer .menuItem {
+    padding: 0.8rem 0.5rem;
+  }
+}
+
+.queue {
+  overflow-y: scroll;
+}
+
+.queue h1 {
+  font-weight: 800;
+}
+
+.queue .tvMode {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
+}
+
+.queue .tvMode i {
+  color: #ffffff;
+  margin-right: 1rem;
+}
+
+.queue .queueData table {
+  margin-bottom: 3rem;
+  border-collapse: collapse;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 6pt;
+  -webkit-box-shadow: 0 20px 20px -5px #00000017;
+          box-shadow: 0 20px 20px -5px #00000017;
+}
+
+.queue .queueData td {
+  border: 1px solid #3f3f3f1a;
+  text-align: left;
+  padding: 4px;
+}
+
+.queue .queueData .docActive {
+  background-color: #149c7c34;
+}
+
+.queue .queueData .docActive select {
+  color: #149c7c;
+}
+
+.queue .queueData td:nth-child(1) {
+  text-align: center;
+}
+
+.queue .queueData td .txt {
+  width: 100%;
+  margin: 0;
+  background-color: transparent;
+  font-weight: 700;
+}
+
+.queue .queueData tr:nth-child(1) {
+  background-color: #149c7c;
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.queue .queueData tr:nth-child(1) th {
+  padding: 1.2rem 0.8rem;
+  text-align: left;
+}
+
+.queue .patientsPage h3 {
+  font-weight: 700;
+  color: #606060;
+}
+
+.queue .patientsPage table td {
+  padding: 0.8rem;
 }
 /*# sourceMappingURL=v1.css.map */

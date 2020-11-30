@@ -1,1 +1,107 @@
-<h1>Patients</h1>
+<div class="content queue">
+  <h1 class="frmHeading">Patients</h1>
+  <br />
+  <form class="formFill">
+    <div class="grid">
+      <div class="txtControl">
+        <label for="txtName">Patient Name :</label>
+        <input
+          type="text"
+          id="txtName"
+          class="txt txt-sm"
+          placeholder="eg. John Doe"
+          required
+        />
+      </div>
+      <div class="txtControl">
+        <label for="txtPhone">Patient Phone :</label>
+        <input
+          type="tel"
+          id="txtPhone"
+          class="txt txt-sm"
+          placeholder="eg. 8787253233"
+          required
+        />
+      </div>
+      <div class="txtControl">
+        <label for="txtGender">Patient Gender :</label>
+        <input
+          type="text"
+          list="dtGender"
+          id="txtGender"
+          class="txt txt-sm"
+          placeholder="Select Gender"
+          required
+        />
+        <datalist id="dtGender">
+          <option value="Male"></option>
+          <option value="Female"></option>
+          <option value="Others"></option>
+        </datalist>
+      </div>
+      <div class="txtControl">
+        <label for="txtAddress">Patient Address :</label>
+        <input
+          type="tel"
+          id="txtAddress"
+          class="txt txt-sm"
+          placeholder="eg.Delhi, India"
+          required
+        />
+      </div>
+      <button type="submit" class="btn btn-sm">Add New Patient</button>
+    </div>
+  </form>
+  <br />
+  <hr />
+  <br />
+
+  <div class="queueData patientsPage">
+    <h3>Recent Patient Added</h3>
+    <br />
+    <table>
+      <tr>
+        <th width="5%">Slno.</th>
+        <th>Name</th>
+        <th>Contact</th>
+        <th>Location</th>
+        <th>Last Visit</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Sample Patient</td>
+        <td>+91 7589 285 298</td>
+        <td>Tripura, India</td>
+        <td>Today</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Sample Patient</td>
+        <td>+91 7589 285 298</td>
+        <td>Tripura, India</td>
+        <td>Today</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Sample Patient</td>
+        <td>+91 7589 285 298</td>
+        <td>Tripura, India</td>
+        <td>Yesterday</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Sample Patient</td>
+        <td>+91 7589 285 298</td>
+        <td>Tripura, India</td>
+        <td>Yesterday</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Sample Patient</td>
+        <td>+91 7589 285 298</td>
+        <td>Tripura, India</td>
+        <td>Yesterday</td>
+      </tr>
+    </table>
+  </div>
+</div>
