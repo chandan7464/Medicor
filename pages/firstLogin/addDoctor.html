@@ -1,75 +1,77 @@
-<h2>Add Doctors</h2>
-<h4>Enter Doctors Details for this clinic</h4>
-<form id="frmDoc">
-  <div class="frmScroll">
-    <label for="txtClinicName">Doctor Name :</label>
-    <input
-      type="text"
-      class="txt"
-      id="txtDocName"
-      placeholder="eg. Kuijan Nuia"
-      autocomplete="off"
-      required
-    />
-    <label for="txtDocAvailFROM">Select Doctor's available days :</label>
-    <div class="weekdays">
-      <input type="checkbox" id="ckMon" value="Mon" />
-      <label for="ckMon">Mon</label>
-      <input type="checkbox" id="ckTues" value="Tues" />
-      <label for="ckTues">Tues</label>
-      <input type="checkbox" id="ckWed" value="Wed" />
-      <label for="ckWed">Wed</label>
-      <input type="checkbox" id="ckThurs" value="Thurs" />
-      <label for="ckThurs">Thurs</label>
-      <input type="checkbox" id="ckFri" value="Fri" />
-      <label for="ckFri">Fri</label>
-      <input type="checkbox" id="ckSat" value="Sat" />
-      <label for="ckSat">Sat</label>
-      <input type="checkbox" id="ckSun" value="Sun" />
-      <label for="ckSun">Sun</label>
+<div class="showOpaAnim">
+  <h2>Add Doctors</h2>
+  <h4>Enter Doctors Details for this clinic</h4>
+  <form id="frmDoc">
+    <div class="frmScroll">
+      <label for="txtClinicName">Doctor Name :</label>
+      <input
+        type="text"
+        class="txt"
+        id="txtDocName"
+        placeholder="eg. Kuijan Nuia"
+        autocomplete="off"
+        required
+      />
+      <label for="txtDocAvailFROM">Select Doctor's available days :</label>
+      <div class="weekdays">
+        <input type="checkbox" id="ckMon" value="Mon" />
+        <label for="ckMon">Mon</label>
+        <input type="checkbox" id="ckTues" value="Tues" />
+        <label for="ckTues">Tues</label>
+        <input type="checkbox" id="ckWed" value="Wed" />
+        <label for="ckWed">Wed</label>
+        <input type="checkbox" id="ckThurs" value="Thurs" />
+        <label for="ckThurs">Thurs</label>
+        <input type="checkbox" id="ckFri" value="Fri" />
+        <label for="ckFri">Fri</label>
+        <input type="checkbox" id="ckSat" value="Sat" />
+        <label for="ckSat">Sat</label>
+        <input type="checkbox" id="ckSun" value="Sun" />
+        <label for="ckSun">Sun</label>
+      </div>
+      <span class="f_nLine">
+        <label for="txtDocAvailFROM">Doctor's Timing (From) :</label>
+        <input
+          type="time"
+          class="txt"
+          id="txtDocTimingFrm"
+          placeholder="From"
+          required
+        />
+      </span>
+      <span class="f_nLine">
+        <label for="txtDocAvailFROM">Doctor's Timing (To) :</label>
+        <input
+          type="time"
+          class="txt"
+          id="txtDocTimingTo"
+          placeholder="To"
+          required
+        />
+      </span>
+      <label for="txtNoPatient">No. of Patients seen per hour :</label>
+      <input
+        type="text"
+        class="txt"
+        id="txtNoPatient"
+        placeholder="eg. 2"
+        autocomplete="off"
+        required
+      />
+      <label for="txtDcFees"
+        >Doctor Fees in <abbr title="Rupees">₹</abbr> :</label
+      >
+      <input
+        type="text"
+        class="txt"
+        id="txtDcFees"
+        placeholder="eg. 400"
+        autocomplete="off"
+        required
+      />
+      <p class="downTxt">** You can add more Doctors later</p>
     </div>
-    <span class="f_nLine">
-      <label for="txtDocAvailFROM">Doctor's Timing (From) :</label>
-      <input
-        type="time"
-        class="txt"
-        id="txtDocTimingFrm"
-        placeholder="From"
-        required
-      />
-    </span>
-    <span class="f_nLine">
-      <label for="txtDocAvailFROM">Doctor's Timing (To) :</label>
-      <input
-        type="time"
-        class="txt"
-        id="txtDocTimingTo"
-        placeholder="To"
-        required
-      />
-    </span>
-    <label for="txtNoPatient">No. of Patients seen per hour :</label>
-    <input
-      type="text"
-      class="txt"
-      id="txtNoPatient"
-      placeholder="eg. 2"
-      autocomplete="off"
-      required
-    />
-    <label for="txtDcFees"
-      >Doctor Fees in <abbr title="Rupees">₹</abbr> :</label
-    >
-    <input
-      type="text"
-      class="txt"
-      id="txtDcFees"
-      placeholder="eg. 400"
-      autocomplete="off"
-      required
-    />
-    <p class="downTxt">** You can add more Doctors later</p>
-  </div>
-  <button class="btn btn-sm" type="submit">Register this Doctor</button>
-  <a onclick="reDirect('#!/createStaff')" class="skip">Skip for now</a>
-</form>
+    <button class="btn btn-sm" type="submit">Register this Doctor</button>
+    <a onclick="reDirect('#!/createStaff')" class="skip">Skip for now</a>
+  </form>
+</div>

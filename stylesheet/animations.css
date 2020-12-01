@@ -1,0 +1,27 @@
+@keyframes showPages {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes opaMore {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.frtContainer {
+  animation: showPages 600ms ease-out both;
+}
+
+.showOpaAnim {
+  animation: opaMore 600ms ease-out both 200ms;
+}
