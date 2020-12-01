@@ -90,7 +90,9 @@ i {
 }
 
 .frmControl {
+  border-bottom: 1px solid #0000002c;
   padding: 0 1.2rem;
+  padding-bottom: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -221,6 +223,9 @@ i {
   }
 }
 
+.txt-dark {
+  color: #252525 !important;
+}
 .txt-danger {
   color: #d15757 !important;
 }
@@ -324,6 +329,9 @@ abbr {
 }
 .opaFull {
   opacity: 1 !important;
+}
+.opaLess {
+  opacity: 0.8 !important;
 }
 
 .clickable {
@@ -1239,6 +1247,9 @@ abbr {
 .tvMode {
   grid-template-columns: 1fr;
   aside {
+    display: none;
+  }
+  #frmQueue {
     display: none;
   }
 }

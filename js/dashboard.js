@@ -17,21 +17,28 @@ const remAddDoc = (item) => {
   elem(item).classList.remove("allTimeShow");
 };
 
-const tvMode = () => {
-  // if ($("main").requestFullscreen) {
-  //   $("main").requestFullscreen();
-  // } else if ($("main").webkitRequestFullscreen) {
-  //   $("main").webkitRequestFullscreen();
-  // } else if ($("main").msRequestFullscreen) {
-  //   $("main").msRequestFullscreen();
-  // }
+const tvMode = (element) => {
+  if (!document.fullscreenElement) {
+    element.innerHTML = "Switch Back to Normal Mode";
+    if (
+      $(".dashboard").classList[$(".dashboard").classList.length - 1] !=
+      "tvMode"
+    ) {
+      if ($(".menuContainer").requestFullscreen) {
+        $(".menuContainer").requestFullscreen();
+      } else if ($("main").webkitRequestFullscreen) {
+        $(".menuContainer").webkitRequestFullscreen();
+      } else if ($(".menuContainer").msRequestFullscreen) {
+        $(".menuContainer").msRequestFullscreen();
+      }
 
-  $(".menuContainer").requestFullscreen();
-  
-  if (window.innerHeight == screen.height) {
+      $(".dashboard").classList.add("tvMode");
+    } else {
+      location.reload();
+    }
+  } else {
     location.reload();
   }
-  $(".dashboard").classList.toggle("tvMode");
 };
 
 const mainApp = angular.module("dashboardApp", ["ngRoute"]);
