@@ -10,6 +10,13 @@ const activeMenu = (activeState) => {
   });
 };
 
+const showAddDoc = (item) => {
+  elem(item).classList.add("allTimeShow");
+};
+const remAddDoc = (item) => {
+  elem(item).classList.remove("allTimeShow");
+};
+
 const mainApp = angular.module("dashboardApp", ["ngRoute"]);
 
 mainApp.config(function ($routeProvider) {
@@ -42,6 +49,10 @@ mainApp.config(function ($routeProvider) {
       templateUrl: "pages/dashboard/help.html",
       controller: "helpCtrl",
     })
+    .when("/doctors", {
+      templateUrl: "pages/dashboard/addDoctors.html",
+      controller: "docCtrl",
+    })
     .otherwise({
       template: "<p class='error'>Error 404! Page not found</p>",
     });
@@ -68,4 +79,7 @@ mainApp
   })
   .controller("helpCtrl", function () {
     activeMenu(7);
+  })
+  .controller("docCtrl", function () {
+    activeMenu(0);
   });

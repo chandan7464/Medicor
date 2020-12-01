@@ -1,0 +1,161 @@
+<div class="content queue">
+  <h1 class="frmHeading">Doctors</h1>
+  <br />
+
+  <button class="btn btn-sm btnADoc" onclick="showAddDoc('md1')">
+    <i class="icon-admin_panel_settings"></i> Add New Doctor to this Clinic
+  </button>
+
+  <br />
+
+  <hr />
+
+  <div class="firstTime allTime allTimeShow" id="md1">
+    <div class="frtContainer">
+      <button class="closeBtn" onclick="remAddDoc('md1')">
+        <i class="icon-cancel"></i>
+      </button>
+      <h2>Add Doctors</h2>
+      <h4>Enter Doctors Details for this clinic</h4>
+      <form id="frmDoc" onsubmit="remAddDoc('md1')">
+        <div class="frmScroll">
+          <label for="txtClinicName">Doctor Name :</label>
+          <input
+            type="text"
+            class="txt"
+            id="txtDocName"
+            placeholder="eg. Kuijan Nuia"
+            autocomplete="off"
+            required
+          />
+          <label for="txtDocAvailFROM">Select Doctor's available days :</label>
+          <div class="weekdays">
+            <input type="checkbox" id="ckMon" value="Mon" />
+            <label for="ckMon">Mon</label>
+            <input type="checkbox" id="ckTues" value="Tues" />
+            <label for="ckTues">Tues</label>
+            <input type="checkbox" id="ckWed" value="Wed" />
+            <label for="ckWed">Wed</label>
+            <input type="checkbox" id="ckThurs" value="Thurs" />
+            <label for="ckThurs">Thurs</label>
+            <input type="checkbox" id="ckFri" value="Fri" />
+            <label for="ckFri">Fri</label>
+            <input type="checkbox" id="ckSat" value="Sat" />
+            <label for="ckSat">Sat</label>
+            <input type="checkbox" id="ckSun" value="Sun" />
+            <label for="ckSun">Sun</label>
+          </div>
+          <span class="f_nLine">
+            <label for="txtDocAvailFROM">Doctor's Timing (From) :</label>
+            <input
+              type="time"
+              class="txt"
+              id="txtDocTimingFrm"
+              placeholder="From"
+              required
+            />
+          </span>
+          <span class="f_nLine">
+            <label for="txtDocAvailFROM">Doctor's Timing (To) :</label>
+            <input
+              type="time"
+              class="txt"
+              id="txtDocTimingTo"
+              placeholder="To"
+              required
+            />
+          </span>
+          <label for="txtNoPatient">No. of Patients seen per hour :</label>
+          <input
+            type="text"
+            class="txt"
+            id="txtNoPatient"
+            placeholder="eg. 2"
+            autocomplete="off"
+            required
+          />
+          <label for="txtDcFees"
+            >Doctor Fees in <abbr title="Rupees">₹</abbr> :</label
+          >
+          <input
+            type="text"
+            class="txt"
+            id="txtDcFees"
+            placeholder="eg. 400"
+            autocomplete="off"
+            required
+          />
+        </div>
+        <button class="btn" type="submit">Register this Doctor</button>
+      </form>
+    </div>
+  </div>
+
+  <br />
+  <div class="queueData patientsPage">
+    <h3>Recent Doctor Added</h3>
+    <br />
+    <table>
+      <tr>
+        <th width="5%">Slno.</th>
+        <th>Name</th>
+        <th>Contact</th>
+        <th width="5%">Gender</th>
+        <th>Address</th>
+        <th>Date of Birth</th>
+        <th width="5%">Age</th>
+        <th>Qualification</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Sample Doctor</td>
+        <td>+91 7589 285 298</td>
+        <td>Male</td>
+        <td>Tripura, India</td>
+        <td>30-12-1990</td>
+        <td>29</td>
+        <td>MBBS</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Sample Doctor</td>
+        <td>+91 7589 285 298</td>
+        <td>Male</td>
+        <td>Tripura, India</td>
+        <td>30-12-1990</td>
+        <td>29</td>
+        <td>MBBS</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Sample Doctor</td>
+        <td>+91 7589 285 298</td>
+        <td>Male</td>
+        <td>Tripura, India</td>
+        <td>30-12-1990</td>
+        <td>29</td>
+        <td>MD</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Sample Doctor</td>
+        <td>+91 7589 285 298</td>
+        <td>Male</td>
+        <td>Tripura, India</td>
+        <td>30-12-1990</td>
+        <td>29</td>
+        <td>P.hd</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Sample Doctor</td>
+        <td>+91 7589 285 298</td>
+        <td>Male</td>
+        <td>Tripura, India</td>
+        <td>30-12-1990</td>
+        <td>29</td>
+        <td>Dentist</td>
+      </tr>
+    </table>
+  </div>
+</div>
