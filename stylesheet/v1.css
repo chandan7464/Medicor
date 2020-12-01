@@ -1564,13 +1564,13 @@ abbr {
       -ms-flex-align: center;
           align-items: center;
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
 }
 
 .dashboard aside .menuContainer .menuItem i {
   color: #adadad;
-  margin-right: 1rem;
-  font-size: 2rem;
+  margin-right: 0.8rem;
+  font-size: 1.8rem;
   -webkit-transition: -webkit-transform 150ms ease-out;
   transition: -webkit-transform 150ms ease-out;
   transition: transform 150ms ease-out;
@@ -1578,8 +1578,8 @@ abbr {
 }
 
 .dashboard aside .menuContainer .menuItem:hover i {
-  -webkit-transform: scale(1.25);
-          transform: scale(1.25);
+  -webkit-transform: scale(1.18);
+          transform: scale(1.18);
 }
 
 .dashboard aside .menuContainer .menuItem .moreOption {
@@ -2484,11 +2484,6 @@ abbr {
 .getStarted .statsContainer .lineChartContainer iframe {
   height: 100%;
   width: 100%;
-  background-color: red1;
-}
-
-.getStarted .statsContainer .lineChartContainer canvas {
-  padding: 2rem;
 }
 
 .getStarted .statsContainer .interectContainer {
@@ -2552,7 +2547,7 @@ abbr {
 }
 
 .getStarted .statsContainer .interectContainer .btnContainer p {
-  font-weight: 800;
+  font-weight: 700;
   font-size: 1.12rem;
 }
 
@@ -2722,17 +2717,19 @@ abbr {
   color: #464646;
   padding: 0.8rem 1rem;
   border-radius: 6pt;
-  -webkit-box-shadow: 0px 18px 20px -8px #00000020, 0px -2px 10px #0000000e;
-          box-shadow: 0px 18px 20px -8px #00000020, 0px -2px 10px #0000000e;
+  -webkit-box-shadow: 0px 5px 20px #00000017;
+          box-shadow: 0px 5px 20px #00000017;
 }
 
 .getStarted .recentIllnessContainer .itemContainer .item h4 {
   color: #149c7c;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 800;
+  margin-bottom: 0.2rem;
 }
 
 .getStarted .recentIllnessContainer .itemContainer .item p {
+  font-size: 0.8rem;
   color: #4d4d4d;
   font-weight: 600;
   width: -webkit-fit-content;

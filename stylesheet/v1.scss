@@ -1148,16 +1148,16 @@ abbr {
         justify-content: flex-start;
         align-items: center;
         font-weight: 700;
-        font-size: 1.2rem;
+        font-size: 1.15rem;
         i {
           color: #adadad;
-          margin-right: 1rem;
-          font-size: 2rem;
+          margin-right: 0.8rem;
+          font-size: 1.8rem;
           transition: transform 150ms ease-out;
         }
         &:hover {
           i {
-            transform: scale(1.25);
+            transform: scale(1.18);
           }
         }
         .moreOption {
@@ -1769,10 +1769,6 @@ abbr {
       iframe {
         height: 100%;
         width: 100%;
-        background-color: red1;
-      }
-      canvas {
-        padding: 2rem;
       }
     }
     .interectContainer {
@@ -1806,7 +1802,7 @@ abbr {
           align-items: center;
         }
         p {
-          font-weight: 800;
+          font-weight: 700;
           font-size: 1.12rem;
         }
         &:hover {
@@ -1939,13 +1935,15 @@ abbr {
         color: #464646;
         padding: 0.8rem 1rem;
         border-radius: 6pt;
-        box-shadow: 0px 18px 20px -8px #00000020, 0px -2px 10px #0000000e;
+        box-shadow: 0px 5px 20px #00000017;
         h4 {
           color: $primary-color;
-          font-size: 1.2rem;
+          font-size: 1rem;
           font-weight: 800;
+          margin-bottom: 0.2rem;
         }
         p {
+          font-size: 0.8rem;
           color: #4d4d4d;
           font-weight: 600;
           width: fit-content;
