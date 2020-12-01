@@ -1414,6 +1414,22 @@ abbr {
   font-size: 1.1rem;
 }
 
+.firstTime .frtContainer .done .doneImg {
+  background-color: #e2e2e2;
+  height: 98px;
+  width: 98px;
+  margin-bottom: 0.5rem;
+  border-radius: 100pt;
+  overflow: hidden;
+}
+
+.firstTime .frtContainer .done .doneImg img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .firstTime .frtContainer .done i {
   font-size: 3rem;
   background-color: transparent;
