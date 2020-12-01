@@ -52,6 +52,13 @@ i {
   font-size: 1.2rem;
 }
 
+.table-responsive {
+  overflow-x: auto;
+  table {
+    min-width: 800px;
+  }
+}
+
 .dflex {
   display: flex;
   justify-content: center;
@@ -1389,7 +1396,7 @@ abbr {
 
 .dashboard {
   .content {
-    max-width: 1600px;
+    max-width: 1250px;
     margin: 0 auto;
     padding-bottom: 0;
     overflow: hidden;
@@ -2102,6 +2109,26 @@ abbr {
       td {
         padding: 0.8rem;
       }
+    }
+  }
+}
+@media (max-width: 600px) {
+  .queue {
+    .frmControl {
+      .dflex {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        .txt,
+        .btn {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .queuePageDataContainer {
+    .tvMode {
+      display: none;
     }
   }
 }
