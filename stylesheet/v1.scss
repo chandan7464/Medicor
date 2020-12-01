@@ -1236,6 +1236,13 @@ abbr {
   }
 }
 
+.tvMode {
+  grid-template-columns: 1fr;
+  aside {
+    display: none;
+  }
+}
+
 .content {
   padding: 1.5rem 2rem;
   width: 100%;

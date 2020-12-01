@@ -17,6 +17,23 @@ const remAddDoc = (item) => {
   elem(item).classList.remove("allTimeShow");
 };
 
+const tvMode = () => {
+  // if ($("main").requestFullscreen) {
+  //   $("main").requestFullscreen();
+  // } else if ($("main").webkitRequestFullscreen) {
+  //   $("main").webkitRequestFullscreen();
+  // } else if ($("main").msRequestFullscreen) {
+  //   $("main").msRequestFullscreen();
+  // }
+
+  $(".menuContainer").requestFullscreen();
+  
+  if (window.innerHeight == screen.height) {
+    location.reload();
+  }
+  $(".dashboard").classList.toggle("tvMode");
+};
+
 const mainApp = angular.module("dashboardApp", ["ngRoute"]);
 
 mainApp.config(function ($routeProvider) {
