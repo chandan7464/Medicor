@@ -1,4 +1,199 @@
-<div class="content dflex">
-    <h2>Page Under Construction</h2>
+<div class="content patientProfile">
+  <h1 class="frmHeading">Business</h1>
+  <br />
+  <div class="billsPage">
+    <div class="lineChartContainer">
+      <iframe src="pages/dashboard/lineChart.html" frameborder="0"></iframe>
+    </div>
+    <div class="card">
+      <h3>Earning Summary</h3>
+      <ul>
+        <li>
+          <label>Total Revenue: </label>
+          <p>Rs. 200.00</p>
+        </li>
+        <li>
+          <label>Billed Amount: </label>
+          <p>Rs. 600.00</p>
+        </li>
+        <li>
+          <label>Amount Received: </label>
+          <p>Rs. 1200.00</p>
+        </li>
+        <li>
+          <label>Amount Pending: </label>
+          <p>Rs. 0.00</p>
+        </li>
+      </ul>
+      <br />
+      <h3>Mode Of Payment</h3>
+      <ul>
+        <li>
+          <label>Cash : </label>
+          <p>Rs. 600.00</p>
+        </li>
+        <li>
+          <label>Card : </label>
+          <p>Rs. 200.00</p>
+        </li>
+        <li>
+          <label>Online : </label>
+          <p>Rs. 700.00</p>
+        </li>
+        <li>
+          <label>Other : </label>
+          <p>Rs. 0.00</p>
+        </li>
+      </ul>
+    </div>
   </div>
-  
+  <br /><br />
+  <div class="btn-links_container border-bottom-dashed">
+    <button class="btn-links" id="service_delivered">Service Delivered</button>
+    <button class="btn-links" id="payment_received">Payment Received</button>
+    <button class="btn-links" id="bills_generated">Bills Generated</button>
+  </div>
+  <section class="tabs">
+    <div class="table_container table-responsive">
+      <table>
+        <tr>
+          <th>Date</th>
+          <th>Patient Name</th>
+          <th>Service Name</th>
+          <th>Doctor Name</th>
+          <th>Total Amount</th>
+          <th>Billed?</th>
+          <th>Paid?</th>
+        </tr>
+        <tr>
+          <td>05 Jan, 2021</td>
+          <td>Sample Patient</td>
+          <td>Service 1</td>
+          <td>Dr. Maula Isnam</td>
+          <td>Rs. 200.00</td>
+          <td>Billed</td>
+          <td class="txt-success">Paid</td>
+        </tr>
+        <tr>
+          <td>08 Jan, 2021</td>
+          <td>Sample Patient</td>
+          <td>Service 1</td>
+          <td>Dr. Maula Isnam</td>
+          <td>Rs. 200.00</td>
+          <td>Billed</td>
+          <td class="txt-success">Paid</td>
+        </tr>
+        <tr>
+          <td>07 Jan, 2021</td>
+          <td>Sample Patient</td>
+          <td>Service 1</td>
+          <td>Dr. Maula Isnam</td>
+          <td>Rs. 200.00</td>
+          <td>Billed</td>
+          <td class="txt-success">Paid</td>
+        </tr>
+        <tr>
+          <td>11 Jan, 2021</td>
+          <td>Sample Patient</td>
+          <td>Service 1</td>
+          <td>Dr. Maula Isnam</td>
+          <td>Rs. 200.00</td>
+          <td>Billed</td>
+          <td class="txt-success">Paid</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+  <section class="tabs">
+    <div class="table_container table-responsive">
+      <table>
+        <tr>
+          <th>Date</th>
+          <th>Patient Name</th>
+          <th>MODE</th>
+          <th>Doctor Name</th>
+          <th>Amount</th>
+          <th>Action</th>
+        </tr>
+        <tr>
+          <td>05 Jan, 2021</td>
+          <td>Sample Patient</td>
+          <td>Cash</td>
+          <td>Dr. Maula Isnam</td>
+          <td>Rs. 200.00</td>
+          <td class="dflex gap1">
+            <button class="btn btn-xsm btn-warning">
+              <i class="icon-create txt-white"></i>
+            </button>
+            <button class="btn btn-xsm btn-danger">
+              <i class="icon-delete txt-white"></i>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>05 Jan, 2021</td>
+          <td>Sample Patient</td>
+          <td>Cash</td>
+          <td>Dr. Maula Isnam</td>
+          <td>Rs. 200.00</td>
+          <td class="dflex gap1">
+            <button class="btn btn-xsm btn-warning">
+              <i class="icon-create txt-white"></i>
+            </button>
+            <button class="btn btn-xsm btn-danger">
+              <i class="icon-delete txt-white"></i>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>05 Jan, 2021</td>
+          <td>Sample Patient</td>
+          <td>Cash</td>
+          <td>Dr. Maula Isnam</td>
+          <td>Rs. 200.00</td>
+          <td class="dflex gap1">
+            <button class="btn btn-xsm btn-warning">
+              <i class="icon-create txt-white"></i>
+            </button>
+            <button class="btn btn-xsm btn-danger">
+              <i class="icon-delete txt-white"></i>
+            </button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </section>
+  <section class="tabs">
+    <div class="table_container table-responsive">
+      <table>
+        <tr>
+          <th>Date</th>
+          <th>Patient Name</th>
+          <th>Bill No.</th>
+          <th>Service Name</th>
+          <th>Amount</th>
+          <th>Action</th>
+        </tr>
+        <tr>
+          <td>05 Jan, 2021</td>
+          <td>Sample Patient</td>
+          <td>#1001</td>
+          <td>Service 1</td>
+          <td>Rs. 200.00</td>
+          <td class="dflex gap1">
+            <button class="btn btn-xsm btn-dark">
+              <i class="icon-remove_red_eye txt-white"></i>
+            </button>
+            <button class="btn btn-xsm btn-warning">
+              <i class="icon-create txt-white"></i>
+            </button>
+            <button class="btn btn-xsm btn-danger">
+              <i class="icon-delete txt-white"></i>
+            </button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </section>
+  <br /><br />
+</div>

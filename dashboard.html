@@ -22,26 +22,40 @@
           <i class="icon-date_range"></i>
           Queue
         </p>
-        <div class="menuItem" onclick="reDirect('#!/appointment')">
+        <div class="menuItem" onclick="dropDownMenu('dpAppointment');">
           <i class="icon-access_time"></i>
           Appointments
+        </div>
+        <div class="menuItemDropDown" id="dpAppointment">
+          <a
+            onclick="reDirect('#!/ScheduledAppointment')"
+            class="links sub_active"
+          >
+            Scheduled
+          </a>
+          <a onclick="reDirect('#!/FollowUpAppointment')" class="links">
+            Follow-Ups
+          </a>
         </div>
         <p class="menuItem" onclick="reDirect('#!/patients')">
           <i class="icon-accessible"></i>
           Patients
         </p>
-        <p class="menuItem" onclick="reDirect('#!/business')">
+        <p class="menuItem" onclick="reDirect('#!/business/service_delivered')">
           <i class="icon-bar_chart"></i>
           Business
         </p>
-        <p class="menuItem" onclick="reDirect('#!/settings')">
+        <p class="menuItem" onclick="dropDownMenu('dpSettings')">
           <i class="icon-settings"></i>
           Settings
         </p>
-        <p class="menuItem" onclick="reDirect('#!/help')">
-          <i class="icon-help"></i>
-          Help
-        </p>
+        <div class="menuItemDropDown" id="dpSettings">
+          <a onclick="reDirect('#!/ClinicSettings')" class="links"
+            >Clinic Manage</a
+          >
+          <a onclick="reDirect('#!/doctors')" class="links">Doctors</a>
+          <a onclick="reDirect('#!/staff')" class="links">Staffs</a>
+        </div>
       </section>
     </aside>
     <main ng-view></main>
@@ -49,5 +63,6 @@
     <script src="js/angularjs/angular-router.min.js"></script>
     <script src="js/v1.js"></script>
     <script src="js/dashboard.js"></script>
+    <script src="js/dTimePicker.js"></script>
   </body>
 </html>

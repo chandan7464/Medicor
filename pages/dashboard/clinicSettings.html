@@ -1,0 +1,239 @@
+<div class="content queue">
+  <h1 class="frmHeading">Clinic Manage</h1>
+  <br />
+  <form class="formFill">
+    <h2 class="opa8 border-bottom-dashed p-1">Clinic Profile</h2>
+    <div class="grid">
+      <div class="txtControl">
+        <label for="txtName">* Clinic Name :</label>
+        <input
+          type="text"
+          id="txtName"
+          class="txt txt-sm"
+          placeholder="eg. John Doe"
+          required
+        />
+      </div>
+      <div class="txtControl">
+        <label for="txtSpeciality">* Clinic Speciality :</label>
+        <input
+          type="tel"
+          id="txtSpeciality"
+          class="txt txt-sm"
+          placeholder="eg. 8787253233"
+          required
+        />
+      </div>
+      <div class="txtControl">
+        <label for="txtPhone1">* Mobile Number 1 :</label>
+        <input
+          type="text"
+          id="txtPhone1"
+          class="txt txt-sm"
+          placeholder="+91 6423 764 345"
+          required
+        />
+      </div>
+      <div class="txtControl">
+        <label for="txtPhone1">Mobile Number 2 :</label>
+        <input
+          type="text"
+          id="txtPhone2"
+          class="txt txt-sm"
+          placeholder="+91 6423 764 345"
+        />
+      </div>
+      <div class="txtControl">
+        <label for="txtEmail">* Clinic Email :</label>
+        <input
+          type="text"
+          id="txtEmail"
+          class="txt txt-sm"
+          placeholder="+91 6423 764 345"
+          required
+        />
+      </div>
+      <div class="txtControl">
+        <label for="txtAddress">* Clinic Address :</label>
+        <input
+          type="text"
+          id="txtAddress"
+          class="txt txt-sm"
+          placeholder="Enter your address here"
+          required
+        />
+      </div>
+      <div class="txtControl">
+        <label for="txtArea">Area (Locality) :</label>
+        <input type="text" id="txtArea" class="txt txt-sm" placeholder="Area" />
+      </div>
+      <div class="txtControl">
+        <label for="txtCity">* Clinic City :</label>
+        <input
+          type="text"
+          id="txtCity"
+          class="txt txt-sm"
+          placeholder="City"
+          required
+        />
+      </div>
+      <div class="txtControl">
+        <label for="txtPIN">* Clinic PIN :</label>
+        <input
+          type="text"
+          id="txtPIN"
+          class="txt txt-sm"
+          placeholder="PIN"
+          required
+        />
+      </div>
+      <button type="submit" class="btn btn-sm">Update Clinic</button>
+    </div>
+  </form>
+  <br />
+  <br />
+  <div class="bgSolid">
+    <h3>Vitals</h3>
+    <hr />
+    <br />
+    <form class="formFill">
+      <div class="dflex flex-start gap1">
+        <div class="txtControl w100">
+          <label for="txtWe"
+            >Add the vitals that you want to record for a patient visiting the
+            clinic.</label
+          >
+          <input
+            type="text"
+            id="txtWe"
+            class="txt txt-sm"
+            placeholder="Type the Vitals to add"
+            required
+          />
+        </div>
+
+        <button type="submit" class="btn btn-sm">Add</button>
+      </div>
+    </form>
+    <br /><br />
+    <div class="table_container table-responsive">
+      <table>
+        <tr>
+          <th>Vitals Name</th>
+          <th width="18%">Action</th>
+        </tr>
+        <tr>
+          <td>Weight (Kg)</td>
+          <td class="dflex gap1">
+            <button class="btn btn-xsm btn-warning">
+              <i class="icon-create txt-white"></i>
+            </button>
+            <button class="btn btn-xsm btn-danger">
+              <i class="icon-delete txt-white"></i>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>Systolic BP (mmHg)</td>
+          <td class="dflex gap1">
+            <button class="btn btn-xsm btn-warning">
+              <i class="icon-create txt-white"></i>
+            </button>
+            <button class="btn btn-xsm btn-danger">
+              <i class="icon-delete txt-white"></i>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>Diastolic BP (mmHg)</td>
+          <td class="dflex gap1">
+            <button class="btn btn-xsm btn-warning">
+              <i class="icon-create txt-white"></i>
+            </button>
+            <button class="btn btn-xsm btn-danger">
+              <i class="icon-delete txt-white"></i>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>Temparature (F)</td>
+          <td class="dflex gap1">
+            <button class="btn btn-xsm btn-warning">
+              <i class="icon-create txt-white"></i>
+            </button>
+            <button class="btn btn-xsm btn-danger">
+              <i class="icon-delete txt-white"></i>
+            </button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <br />
+  <div class="bgSolid">
+    <h3>Services</h3>
+    <hr />
+    <br />
+    <form class="formFill">
+      <div class="dflex flex-start gap1">
+        <div class="txtControl w100">
+          <label for="txtWe"> Service Name </label>
+          <input
+            type="text"
+            id="txtWe"
+            class="txt txt-sm"
+            placeholder="Type the Vitals to add"
+            required
+          />
+        </div>
+        <div class="txtControl w100">
+          <label for="txtWe"> Price </label>
+          <input
+            type="text"
+            id="txtWe"
+            class="txt txt-sm"
+            placeholder="Type the Vitals to add"
+            required
+          />
+        </div>
+
+        <button type="submit" class="btn btn-sm">Add</button>
+      </div>
+    </form>
+    <br /><br />
+    <div class="table_container table-responsive dtable">
+      <table>
+        <tr>
+          <th>Service Name</th>
+          <th>Price(Rs.)</th>
+          <th width="18%">Action</th>
+        </tr>
+        <tr>
+          <td>Service 1</td>
+          <td>200.00</td>
+          <td class="dflex gap1">
+            <button class="btn btn-xsm btn-warning">
+              <i class="icon-create txt-white"></i>
+            </button>
+            <button class="btn btn-xsm btn-danger">
+              <i class="icon-delete txt-white"></i>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>Service 2</td>
+          <td>400.00</td>
+          <td class="dflex gap1">
+            <button class="btn btn-xsm btn-warning">
+              <i class="icon-create txt-white"></i>
+            </button>
+            <button class="btn btn-xsm btn-danger">
+              <i class="icon-delete txt-white"></i>
+            </button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <br /><br />
+</div>

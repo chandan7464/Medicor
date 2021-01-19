@@ -1,0 +1,874 @@
+<div class="content patientProfile">
+  <h1 class="frmHeading">Patient Profile</h1>
+  <br />
+  <div class="profileDescription">
+    <div class="imgContainer" id="lbInitialName">JS</div>
+    <span>
+      <h2 id="lbPatientName">Jaeson Sandya</h2>
+      <h5>+91 8974 642 562</h5>
+    </span>
+  </div>
+  <div class="btn-links_container border-bottom-dashed">
+    <button class="btn-links" id="p_details">Patient Details</button>
+    <button class="btn-links" id="p_prescription">Prescription</button>
+    <button class="btn-links" id="p_history">History</button>
+    <button class="btn-links" id="p_billing">Billing</button>
+  </div>
+  <section class="tabs">
+    <form class="formFill">
+      <div class="grid">
+        <div class="txtControl">
+          <label for="txtName">Patient Name :</label>
+          <input
+            type="text"
+            id="txtName"
+            class="txt txt-sm"
+            value="Jaeson Sandya"
+            required
+          />
+        </div>
+        <div class="txtControl">
+          <label for="txtPhone">Patient Phone :</label>
+          <input
+            type="text"
+            id="txtPhone"
+            class="txt txt-sm"
+            value="8974 642 562"
+            required
+          />
+        </div>
+        <div class="txtControl">
+          <label for="txtGender">Patient Gender :</label>
+          <input
+            type="text"
+            list="dtGender"
+            id="txtGender"
+            class="txt txt-sm"
+            placeholder="Select Gender"
+            value="Male"
+            required
+          />
+          <datalist id="dtGender">
+            <option value="Male"></option>
+            <option value="Female"></option>
+            <option value="Others"></option>
+          </datalist>
+        </div>
+        <div class="txtControl">
+          <label for="txtAddress">Patient Address :</label>
+          <input
+            type="text"
+            id="txtAddress"
+            class="txt txt-sm"
+            placeholder="eg.Delhi, India"
+          />
+        </div>
+        <div class="txtControl">
+          <label for="txtDOB">Patient DOB :</label>
+          <input
+            type="date"
+            id="txtDOB"
+            class="txt txt-sm"
+            value="1996-01-08"
+            required
+          />
+        </div>
+        <div class="txtControl">
+          <label for="txtAge">Patient Age :</label>
+          <input
+            type="text"
+            id="txtAge"
+            class="txt txt-sm"
+            value="24"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-sm">Update</button>
+      </div>
+    </form>
+    <hr />
+    <br />
+    <section class="sectionHolder">
+      <h2>Medical Information</h2>
+      <form>
+        <h4>Did the patient suffered for any of these?</h4>
+        <div class="check_container">
+          <div class="frm-content">
+            <input type="checkbox" id="cb1" value="Diaberes Mellitus" />
+            <label for="cb1">Diaberes Mellitus</label>
+          </div>
+          <div class="frm-content">
+            <input type="checkbox" id="cb2" value="Asthma" />
+            <label for="cb2">Asthma</label>
+          </div>
+          <div class="frm-content">
+            <input type="checkbox" id="cb3" value="Hypertension" />
+            <label for="cb3">Hypertension</label>
+          </div>
+          <div class="frm-content">
+            <input type="checkbox" id="cb4" value="Epilepsy" />
+            <label for="cb4">Epilepsy</label>
+          </div>
+          <div class="frm-content">
+            <input type="checkbox" id="cb5" value="Thyroid Problem" />
+            <label for="cb5">Thyroid Problem</label>
+          </div>
+          <div class="frm-content">
+            <input type="checkbox" id="cb6" value="Jaundice" />
+            <label for="cb6">Jaundice</label>
+          </div>
+          <div class="frm-content">
+            <input type="checkbox" id="cb7" value="Migraine" />
+            <label for="cb7">Migraine</label>
+          </div>
+          <div class="frm-content">
+            <input type="checkbox" id="cb8" value="HIV" />
+            <label for="cb8">HIV</label>
+          </div>
+          <div class="frm-content">
+            <input type="checkbox" id="cb9" value="Heart Problems" />
+            <label for="cb9">Heart Problems</label>
+          </div>
+          <div class="frm-content">
+            <input type="checkbox" id="cb10" value="Blood Pressure High/Low" />
+            <label for="cb10">Blood Pressure High/Low</label>
+          </div>
+          <div class="frm-content">
+            <input type="checkbox" id="cb11" value="TB" />
+            <label for="cb11">TB</label>
+          </div>
+          <div class="frm-content">
+            <input type="checkbox" id="cb12" value="Cancer" />
+            <label for="cb12">Cancer</label>
+          </div>
+        </div>
+        <br /><br />
+        <div class="text_container tc-stretch border-bottom-dashed">
+          <label for="txt_others">Others :</label>
+          <input type="text" class="txt txt-sm" id="txt_others" />
+        </div>
+        <h4>Any allergies of the Patient ?</h4>
+        <div class="dGrid">
+          <div class="text_container">
+            <label for="txt_food">Food :</label>
+            <input type="text" class="txt txt-sm" id="txt_food" />
+          </div>
+          <div class="text_container">
+            <label for="txt_drugs">Drugs :</label>
+            <input type="text" class="txt txt-sm" id="txt_drugs" />
+          </div>
+        </div>
+        <div class="dflex flex-end">
+          <button class="btn btn-sm" type="submit">Save</button>
+        </div>
+      </form>
+      <br /><br />
+    </section>
+    <hr />
+    <br />
+    <section class="sectionHolder">
+      <h2>Patient's Lifestyle</h2>
+      <form>
+        <div class="radio_container">
+          <div class="frm-content">
+            <div class="frm-text">
+              <p>Diet</p>
+            </div>
+            <div class="frm-radio_container">
+              <div class="frm-radio">
+                <input type="radio" id="rb1" value="Veg" name="rd-diet" />
+                <label for="rb1">Veg</label>
+              </div>
+              <div class="frm-radio">
+                <input type="radio" id="rb2" value="Non-Veg" name="rd-diet" />
+                <label for="rb2">Non-Veg</label>
+              </div>
+            </div>
+          </div>
+          <div class="frm-content">
+            <div class="frm-text">
+              <p>Smoking</p>
+            </div>
+            <div class="frm-radio_container">
+              <div class="frm-radio">
+                <input type="radio" id="rb3" value="1" name="rd-smoke" />
+                <label for="rb3">Yes</label>
+              </div>
+              <div class="frm-radio">
+                <input type="radio" id="rb4" value="0" name="rd-smoke" />
+                <label for="rb4">No</label>
+              </div>
+            </div>
+          </div>
+          <div class="frm-content">
+            <div class="frm-text">
+              <p>Alcohol</p>
+            </div>
+            <div class="frm-radio_container">
+              <div class="frm-radio">
+                <input type="radio" id="rb5" value="1" name="rd-alcohol" />
+                <label for="rb5">Yes</label>
+              </div>
+              <div class="frm-radio">
+                <input type="radio" id="rb6" value="0" name="rd-alcohol" />
+                <label for="rb6">No</label>
+              </div>
+            </div>
+          </div>
+          <div class="frm-content">
+            <div class="frm-text">
+              <p>Sleeping</p>
+            </div>
+            <div class="frm-radio_container">
+              <div class="frm-radio">
+                <input type="radio" id="rb7" value="regular" name="rd-sleep" />
+                <label for="rb7">Regular</label>
+              </div>
+              <div class="frm-radio">
+                <input
+                  type="radio"
+                  id="rb8"
+                  value="irregular"
+                  name="rd-sleep"
+                />
+                <label for="rb8">Irregular</label>
+              </div>
+              <div class="frm-radio">
+                <input
+                  type="radio"
+                  id="rb9"
+                  value="disturbed"
+                  name="rd-sleep"
+                />
+                <label for="rb9">Disturbed</label>
+              </div>
+            </div>
+          </div>
+          <div class="frm-content">
+            <div class="frm-text">
+              <p>Bowel</p>
+            </div>
+            <div class="frm-radio_container">
+              <div class="frm-radio">
+                <input type="radio" id="rb10" value="regular" name="rd-bowel" />
+                <label for="rb10">Regular</label>
+              </div>
+              <div class="frm-radio">
+                <input
+                  type="radio"
+                  id="rb11"
+                  value="irregular"
+                  name="rd-bowel"
+                />
+                <label for="rb11">Irregular</label>
+              </div>
+              <div class="frm-radio">
+                <input
+                  type="radio"
+                  id="rb12"
+                  value="disturbed"
+                  name="rd-bowel"
+                />
+                <label for="rb12">Disturbed</label>
+              </div>
+            </div>
+          </div>
+          <div class="frm-content">
+            <div class="frm-text">
+              <p>Bladder</p>
+            </div>
+            <div class="frm-radio_container">
+              <div class="frm-radio">
+                <input
+                  type="radio"
+                  id="rb13"
+                  value="regular"
+                  name="rd-bladder"
+                />
+                <label for="rb13">Regular</label>
+              </div>
+              <div class="frm-radio">
+                <input
+                  type="radio"
+                  id="rb14"
+                  value="irregular"
+                  name="rd-bladder"
+                />
+                <label for="rb14">Irregular</label>
+              </div>
+              <div class="frm-radio">
+                <input
+                  type="radio"
+                  id="rb15"
+                  value="disturbed"
+                  name="rd-bladder"
+                />
+                <label for="rb15">Disturbed</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="dflex flex-end">
+          <button class="btn btn-sm" type="submit">Save</button>
+        </div>
+      </form>
+      <br /><br />
+    </section>
+  </section>
+  <section class="tabs">
+    <div class="sectionHolder bg-solid">
+      <h3>Vitals :</h3>
+      <form class="formFill">
+        <div class="grid">
+          <div class="txtControl">
+            <label for="txtWe">WE :</label>
+            <input
+              type="text"
+              id="txtWe"
+              class="txt txt-sm"
+              placeholder="We"
+              required
+            />
+          </div>
+          <div class="txtControl">
+            <label for="txtWeight">Weight (Kg) :</label>
+            <input
+              type="text"
+              id="txtWeight"
+              class="txt txt-sm"
+              placeholder="eg. 45 kg"
+              required
+            />
+          </div>
+          <div class="txtControl">
+            <label for="txtGender">Diastolic BP (mmHg) :</label>
+            <input
+              type="text"
+              id="txtGender"
+              class="txt txt-sm"
+              placeholder="Diastolic BP (mmHg)"
+              required
+            />
+          </div>
+          <div class="txtControl">
+            <label for="txtSysBP">Systolic BP (mmHg) :</label>
+            <input
+              type="text"
+              id="txtSysBP"
+              class="txt txt-sm"
+              placeholder="Systolic BP (mmHg)"
+            />
+          </div>
+          <div class="txtControl">
+            <label for="txtTemp">Temperature (F) :</label>
+            <input
+              type="text"
+              id="txtTemp"
+              class="txt txt-sm"
+              placeholder="200 F"
+              required
+            />
+          </div>
+
+          <button type="submit" class="btn btn-sm">Add</button>
+        </div>
+      </form>
+    </div>
+    <br />
+    <div class="sectionHolder bg-solid">
+      <h3>Observation :</h3>
+      <form class="formFill">
+        <div class="grid g-fit">
+          <div class="txtControl">
+            <label for="txtComplaints">Complaints :</label>
+            <input
+              type="text"
+              id="txtComplaints"
+              class="txt txt-sm"
+              placeholder="Type the complaints"
+              required
+            />
+          </div>
+          <div class="txtControl">
+            <label for="txtSince">Since :</label>
+            <div class="dflex flex-start twoInputs">
+              <input
+                type="text"
+                id="txtSince"
+                class="txt txt-sm"
+                placeholder="eg. 10"
+                required
+              />
+              <select class="txt txt-sm" id="txtSince_time">
+                <option value="Days">Hours</option>
+                <option value="Days" selected>Days</option>
+                <option value="Days">Weeks</option>
+                <option value="Days">Months</option>
+                <option value="Days">Years</option>
+              </select>
+            </div>
+          </div>
+          <button class="btn btn-sm btn-icon">
+            Add <i class="icon-add"></i>
+          </button>
+        </div>
+      </form>
+      <form class="formFill">
+        <div class="grid g-fit">
+          <div class="txtControl">
+            <label for="txtPhyExam_Observe"
+              >Physical examination/observation :</label
+            >
+            <input
+              type="text"
+              id="txtPhyExam_Observe"
+              class="txt txt-sm"
+              placeholder="Add Notes"
+              required
+            />
+          </div>
+          <div class="txtControl">
+            <label for="txtDiagnosis">Diagnosis :</label>
+            <input
+              type="text"
+              id="txtDiagnosis"
+              class="txt txt-sm"
+              placeholder="Type the Diagnosis"
+              required
+            />
+          </div>
+        </div>
+      </form>
+    </div>
+    <br />
+    <div class="sectionHolder bg-solid">
+      <h3>Investigation :</h3>
+      <form class="formFill">
+        <div class="grid g-fit">
+          <div class="txtControl">
+            <label for="txtSel_test">Select Test :</label>
+            <input
+              type="text"
+              id="txtSel_test"
+              class="txt txt-sm"
+              placeholder="Type the Tests"
+              required
+            />
+          </div>
+          <div class="txtControl">
+            <label for="txtInvestigation_Notes">Notes :</label>
+            <input
+              type="text"
+              id="txtInvestigation_Notes"
+              class="txt txt-sm"
+              placeholder="Notes"
+              required
+            />
+          </div>
+        </div>
+        <div class="dflex flex-end">
+          <button class="btn btn-sm btn-icon">Add</button>
+        </div>
+      </form>
+    </div>
+    <br />
+    <div class="sectionHolder bg-solid">
+      <h3>Medication :</h3>
+      <form class="formFill">
+        <div class="grid g-fit">
+          <div class="txtControl">
+            <label for="txtMedicineName">Medicine Name :</label>
+            <input
+              type="text"
+              id="txtMedicineName"
+              class="txt txt-sm"
+              placeholder="Enter the Medicine name"
+              required
+            />
+          </div>
+          <div class="txtControl">
+            <label for="txtMedicineWhen">When :</label>
+            <input
+              type="text"
+              list="dtMedicineWhen"
+              id="txtMedicineWhen"
+              class="txt txt-sm"
+              placeholder="Notes"
+              required
+            />
+            <datalist id="dtMedicineWhen">
+              <option value="Morning"></option>
+              <option value="Afternoon"></option>
+              <option value="Night"></option>
+              <option value="2 times a day"></option>
+              <option value="3 times a day"></option>
+              <option value="4 times a day"></option>
+              <option value="5 times a day"></option>
+              <option value="6 times a day"></option>
+              <option value="SOS"></option>
+              <option value="STAT"></option>
+            </datalist>
+          </div>
+        </div>
+        <br />
+        <div class="grid g-fit">
+          <div class="txtControl">
+            <label for="txtDoseQuantity">Dose Quantity :</label>
+            <input
+              list="dtDoseQuantity"
+              type="text"
+              id="txtDoseQuantity"
+              class="txt txt-sm"
+              placeholder="eg. 1"
+              required
+            />
+            <datalist id="dtDoseQuantity">
+              <option value="1"></option>
+              <option value="2"></option>
+              <option value="1/2"></option>
+              <option value="1/3"></option>
+              <option value="1/4"></option>
+            </datalist>
+          </div>
+          <div class="txtControl">
+            <label for="txtDoseUnit">Dose Unit :</label>
+            <input
+              list="dtDoseUnit"
+              id="txtDoseUnit"
+              class="txt txt-sm"
+              placeholder="eg. Tablet"
+              required
+            />
+            <datalist id="dtDoseUnit">
+              <option value="Tablet"></option>
+              <option value="Capsule"></option>
+              <option value="tsp"></option>
+              <option value="mL"></option>
+              <option value="mg"></option>
+              <option value="grams"></option>
+              <option value="drops"></option>
+            </datalist>
+          </div>
+          <div class="txtControl">
+            <label for="txtMedicineRepeat">Repeat :</label>
+            <input
+              list="dtMedicineRepeat"
+              id="txtMedicineRepeat"
+              class="txt txt-sm"
+              placeholder="eg. Tablet"
+              required
+            />
+            <datalist id="dtMedicineRepeat">
+              <option value="Daily"></option>
+              <option value="Weekly"></option>
+              <option value="Monthly"></option>
+            </datalist>
+          </div>
+          <div class="txtControl">
+            <label for="txtMedicineFor">For :</label>
+            <div class="dflex flex-start twoInputs">
+              <input
+                id="txtMedicineFor"
+                class="txt txt-sm"
+                placeholder="eg. 10"
+                required
+              />
+              <select class="txt txt-sm" id="txtMedicineFor_time">
+                <option value="Days" selected>Days</option>
+                <option value="Days">Weeks</option>
+                <option value="Days">Months</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="grid g-fit">
+          <div class="txtControl">
+            <label for="txtSpecialInstruct">Special Instructions :</label>
+            <input
+              list="dtSpecialInstruct"
+              type="text"
+              id="txtSpecialInstruct"
+              class="txt txt-sm"
+              placeholder="Select or type instructions"
+              required
+            />
+            <datalist id="dtSpecialInstruct">
+              <option value="After Food"></option>
+              <option value="Before Food"></option>
+              <option value="With Food"></option>
+            </datalist>
+          </div>
+          <div class="txtControl">
+            <label for="txtMedicineAltr">Alternative Medicine :</label>
+            <input
+              type="text"
+              id="txtMedicineAltr"
+              class="txt txt-sm"
+              placeholder="Enter alternative medicine"
+              required
+            />
+          </div>
+          <button class="btn btn-sm btn-icon">Add</button>
+        </div>
+        <br />
+      </form>
+    </div>
+    <br />
+    <div class="sectionHolder bg-solid">
+      <h3>Advice :</h3>
+      <form class="formFill">
+        <div class="grid g-fit">
+          <div class="txtControl">
+            <label for="txtAddAdvice">Add Advice :</label>
+            <input
+              type="text"
+              id="txtAddAdvice"
+              class="txt txt-sm"
+              placeholder="Enter the Advice"
+              required
+            />
+          </div>
+          <div class="txtControl">
+            <button class="btn btn-sm">Add</button>
+          </div>
+        </div>
+        <br />
+      </form>
+    </div>
+    <br />
+    <div class="sectionHolder bg-solid">
+      <h3>Diet & Exercise :</h3>
+      <form class="formFill">
+        <div class="grid g-fit">
+          <div class="txtControl">
+            <label for="txtAddDiet">Add Diet :</label>
+            <input
+              type="text"
+              id="txtAddDiet"
+              class="txt txt-sm"
+              placeholder="Enter the Diet"
+              required
+            />
+          </div>
+          <div class="txtControl">
+            <button class="btn btn-sm">Add</button>
+          </div>
+        </div>
+        <br />
+      </form>
+    </div>
+    <br />
+    <div class="sectionHolder bg-solid">
+      <h3>Next Visit :</h3>
+      <form class="formFill">
+        <div class="grid g-fit border-bottom-dashed">
+          <div class="txtControl">
+            <label for="txtNextVisit">Next Visit After :</label>
+            <input
+              type="text"
+              id="txtNextVisit"
+              class="txt txt-sm"
+              placeholder="eg. 10"
+              required
+            />
+          </div>
+          <div class="txtControl">
+            <label for="txtNextVisitFreq">Frequency :</label>
+            <input
+              list="dtNextVisitFreq"
+              type="text"
+              id="txtNextVisitFreq"
+              class="txt txt-sm"
+              placeholder="Enter or Select Frequency"
+              required
+            />
+            <datalist id="dtNextVisitFreq">
+              <option value="Days"></option>
+              <option value="Weeks"></option>
+              <option value="Months"></option>
+            </datalist>
+          </div>
+        </div>
+        <div class="grid">
+          <div class="txtControl">
+            <label for="txtNextVisitDate">Next Visit Date :</label>
+            <input
+              type="date"
+              id="txtNextVisitDate"
+              class="txt txt-sm"
+              placeholder="eg. 10"
+              required
+            />
+          </div>
+        </div>
+        <br />
+      </form>
+    </div>
+    <br />
+    <div class="dflex flex-end gap1">
+      <button class="btn btn-sm btn-dark">Save</button>
+      <button class="btn btn-sm">Finalize</button>
+    </div>
+    <br /><br />
+  </section>
+  <section class="tabs">
+    <div class="sectionHolder">
+      <h2>History</h2>
+      <div class="table_container table-responsive">
+        <table>
+          <tr>
+            <th>Patient Name</th>
+            <th>Clinic</th>
+            <th>Location</th>
+            <th>Visited Date</th>
+            <th>Doctor</th>
+          </tr>
+          <tr>
+            <td>Sample Patient</td>
+            <td>Clinic 1</td>
+            <td>Assampara, RanirBazar, Agartala</td>
+            <td>20/01/2021</td>
+            <td>Dr. Msuich Nuci</td>
+          </tr>
+          <tr>
+            <td>Sample Patient</td>
+            <td>Clinic 1</td>
+            <td>Assampara, RanirBazar, Agartala</td>
+            <td>20/01/2021</td>
+            <td>Dr. Msuich Nuci</td>
+          </tr>
+          <tr>
+            <td>Sample Patient</td>
+            <td>Clinic 1</td>
+            <td>Assampara, RanirBazar, Agartala</td>
+            <td>20/01/2021</td>
+            <td>Dr. Msuich Nuci</td>
+          </tr>
+          <tr>
+            <td>Sample Patient</td>
+            <td>Clinic 1</td>
+            <td>Assampara, RanirBazar, Agartala</td>
+            <td>20/01/2021</td>
+            <td>Dr. Msuich Nuci</td>
+          </tr>
+          <tr>
+            <td>Sample Patient</td>
+            <td>Clinic 1</td>
+            <td>Assampara, RanirBazar, Agartala</td>
+            <td>20/01/2021</td>
+            <td>Dr. Msuich Nuci</td>
+          </tr>
+        </table>
+      </div>
+      <br /><br />
+    </div>
+  </section>
+  <section class="tabs">
+    <div class="sectionHolder">
+      <h2>Billing</h2>
+      <form class="formFill bg-solid">
+        <h3>Add New Service</h3>
+        <br />
+        <div class="grid g-fit">
+          <div class="txtControl">
+            <label for="txtBilling_Doctor">Doctor :</label>
+            <select id="txtBilling_Doctor" class="txt txt-sm">
+              <option value="Dr. Juisa Juvai">Dr. Juisa Juvai</option>
+              <option value="Dr. Kinulax Nusus">Dr. Kinulax Nusus</option>
+            </select>
+          </div>
+          <div class="txtControl">
+            <label for="txtBilling_Date">Billing Date :</label>
+            <input
+              type="date"
+              id="txtBilling_Date"
+              class="txt txt-sm"
+              placeholder="Select Today's Date"
+              required
+            />
+          </div>
+          <div class="txtControl">
+            <label for="txtBilling_ServiceName">Service Name :</label>
+            <select id="txtBilling_ServiceName" class="txt txt-sm">
+              <option value="Service 1">Service 1</option>
+            </select>
+          </div>
+        </div>
+        <br />
+        <div class="grid">
+          <div class="txtControl">
+            <label for="txtBilling_Quantity">Quantity :</label>
+            <input
+              type="text"
+              id="txtBilling_Quantity"
+              class="txt txt-sm"
+              placeholder="Enter the quantity.."
+              required
+            />
+          </div>
+          <div class="txtControl">
+            <label for="txtBilling_Amount">Amount :</label>
+            <input
+              type="text"
+              id="txtBilling_Amount"
+              class="txt txt-sm"
+              placeholder="Amount"
+              required
+            />
+          </div>
+          <div class="txtControl">
+            <label for="txtBilling_Discount">Discount :</label>
+            <div class="dflex flex-start gap1">
+              <input
+                type="text"
+                id="txtBilling_Discount"
+                class="txt txt-sm"
+                placeholder="Discount(if any)"
+                required
+              />
+              <select id="txtBilling_DiscountUnit" class="txt txt-sm">
+                <option value="Rs.">Rs.</option>
+                <option value="%">%</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="dflex flex-end">
+          <button class="btn btn-sm">Add</button>
+        </div>
+      </form>
+      <br /><br />
+      <h2>Previous Bills</h2>
+      <div class="table_container table-responsive">
+        <table>
+          <tr>
+            <th>Date</th>
+            <th>Service</th>
+            <th>Total Amount</th>
+            <th>Paid</th>
+            <th>Action</th>
+          </tr>
+          <tr>
+            <td>25 Jan, 2021</td>
+            <td>Service 1</td>
+            <td>Rs. 500.02</td>
+            <td>Not Paid</td>
+            <td>
+              <div class="dflex gap1 w100">
+                <button class="btn btn-xsm btn-danger btn-icon">
+                  <i class="icon-delete"></i>
+                </button>
+                <button class="btn btn-xsm btn-success btn-icon">
+                  <i class="icon-receipt_long"></i>
+                </button>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <br /><br /><br />
+    </div>
+  </section>
+</div>

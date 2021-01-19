@@ -18,6 +18,15 @@ hr {
   opacity: 0.3;
 }
 
+.noScroll {
+  overflow: hidden !important;
+}
+
+.noScroll::-webkit-scrollbar {
+  width: 0px !important;
+  height: 0px !important;
+}
+
 i {
   color: #404040;
   font-size: 1.2rem;
@@ -43,6 +52,32 @@ i {
           align-items: center;
 }
 
+.flex-spaceAr {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex-start {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex-end {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .txtControl {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -57,6 +92,173 @@ i {
   margin: 0.4rem 0.8rem;
   font-weight: 700;
   opacity: 0.8;
+}
+
+.gap1 {
+  gap: 1rem;
+}
+
+.gap2 {
+  gap: 1.5rem;
+}
+
+.gap3 {
+  gap: 2rem;
+}
+
+.gap4 {
+  gap: 2.5rem;
+}
+
+/* dTimePicker */
+.dTimeTxtControl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.dTimeTxtControl .txtDropDownContainer {
+  position: relative;
+  width: 100%;
+}
+
+.dTimeTxtControl .txtDropDownContainer .txt {
+  text-transform: uppercase;
+  cursor: pointer;
+  text-align: left;
+}
+
+.dTimeTxtControl .txtDropDownContainer .txtDropDown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  max-height: 160px;
+  overflow: hidden;
+  position: absolute;
+  top: 80%;
+  left: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #ffffff;
+  border-radius: 4pt;
+  -webkit-box-shadow: 2px 2px 10px #00000018;
+          box-shadow: 2px 2px 10px #00000018;
+  z-index: 10;
+}
+
+.dTimeTxtControl .txtDropDownContainer .txtDropDown .timeDivision {
+  width: 100%;
+  max-height: 160px;
+  overflow: hidden;
+  overflow-y: scroll;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dTimeTxtControl .txtDropDownContainer .txtDropDown .timeDivision::-webkit-scrollbar {
+  width: 6px;
+  height: 0;
+  background-color: transparent;
+  border-radius: 20pt;
+  visibility: hidden;
+}
+
+.dTimeTxtControl .txtDropDownContainer .txtDropDown .timeDivision::-webkit-scrollbar-thumb {
+  background-color: #149c7c50;
+  border-radius: 20pt;
+  visibility: hidden;
+  -webkit-transition: visibility 0.4s ease;
+  transition: visibility 0.4s ease;
+}
+
+.dTimeTxtControl .txtDropDownContainer .txtDropDown .timeDivision:hover::-webkit-scrollbar-thumb {
+  visibility: visible;
+}
+
+.dTimeTxtControl .txtDropDownContainer .txtDropDown .timeDivision .txtDropDownItem {
+  all: unset;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  font-weight: 800;
+  cursor: pointer;
+  color: #4b4b4b;
+  position: relative;
+}
+
+.dTimeTxtControl .txtDropDownContainer .txtDropDown .timeDivision .txtDropDownItem:hover::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #149c7c;
+  opacity: 0.1;
+}
+
+.dTimeTxtControl .txtDropDownContainer .txtDropDown .timeDivision .ddiActive {
+  background-color: #149c7c;
+  color: #ffffff;
+}
+
+.dTimeTxtControl .txtDropDownContainer .txtDropDown .timeDivision .drpBtn {
+  background-color: #149c7c;
+  width: 45px;
+  height: 45px;
+  padding: 0;
+  border-radius: 4pt;
+  margin: 1rem;
+  overflow: none;
+}
+
+.dTimeTxtControl .txtDropDownContainer .txtDropDown .timeDivision .drpBtn i {
+  color: #ffffff;
+}
+
+.dTimeTxtControl .txtDropDownContainer .txtDropDown .timeDivision .drpBtn::before {
+  display: none !important;
+}
+
+.dTimeTxtControl .txtDropDownContainer .txtDropDown .timeDivision .drpBtn:hover {
+  background-color: #0e6f58;
 }
 
 .formFill .grid {
@@ -74,6 +276,16 @@ i {
           justify-content: center;
   -ms-grid-column-align: center;
       justify-self: center;
+}
+
+.formFill .g-fit {
+  -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.formFill label {
+  opacity: 0.6;
+  font-size: 0.8rem;
 }
 
 .formFill .txt {
@@ -293,6 +505,29 @@ i {
           transform: translateY(1.5px);
 }
 
+.btn-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 0.2rem;
+}
+
+.btn-icon i {
+  color: #ffffff;
+  padding: 0;
+  margin: 0;
+}
+
 .btn-sm {
   padding: 0.8rem 1.2rem;
 }
@@ -309,8 +544,36 @@ i {
   background-color: #303030;
 }
 
+.btn-transparent {
+  background-color: transparent !important;
+}
+
+.btn-white {
+  background-color: #ffffff !important;
+}
+
+.btn-danger {
+  background-color: #d15757 !important;
+}
+
+.btn-success {
+  background-color: #16a35d !important;
+}
+
+.btn-warning {
+  background-color: #ffa900 !important;
+}
+
 .txt-dark {
   color: #252525 !important;
+}
+
+.txt-center {
+  text-align: center !important;
+}
+
+.txt-white {
+  color: #ffffff !important;
 }
 
 .txt-danger {
@@ -397,6 +660,22 @@ i {
           flex-direction: column;
 }
 
+.w100 {
+  width: 100%;
+}
+
+.rounded {
+  border-radius: 500pt;
+}
+
+.border-0 {
+  border: none !important;
+}
+
+.noStyle {
+  all: unset;
+}
+
 abbr {
   cursor: help;
   text-decoration: underline;
@@ -411,7 +690,9 @@ abbr {
 }
 
 .txtWrap1 {
-  width: var(--wrWidth);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 1;
@@ -1208,6 +1489,10 @@ abbr {
           align-items: flex-start;
 }
 
+.firstTime .frtContainer .dTimeTxtControl .txtDropDownContainer .txtDropDown {
+  width: 100%;
+}
+
 .firstTime .frtContainer ng-view {
   width: 100%;
 }
@@ -1247,51 +1532,6 @@ abbr {
 .firstTime .frtContainer button {
   margin-top: 1rem;
   width: 100%;
-}
-
-.firstTime .frtContainer .frmScroll {
-  height: 42vh;
-  max-height: 620px;
-  min-height: 200px;
-  overflow: hidden;
-  overflow-y: scroll;
-  padding-right: 6px;
-  width: 103%;
-  position: relative;
-}
-
-.firstTime .frtContainer .frmScroll::-webkit-scrollbar {
-  width: 6px;
-  height: 0;
-  background-color: transparent;
-  border-radius: 20pt;
-  visibility: hidden;
-}
-
-.firstTime .frtContainer .frmScroll::-webkit-scrollbar-thumb {
-  background-color: #149c7c50;
-  border-radius: 20pt;
-  visibility: hidden;
-  -webkit-transition: visibility 0.4s ease;
-  transition: visibility 0.4s ease;
-}
-
-.firstTime .frtContainer .frmScroll:hover::-webkit-scrollbar-thumb {
-  visibility: visible;
-}
-
-.firstTime .frtContainer .frmScroll::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 40px;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #eeeeee00), to(#eeeeee));
-  background: linear-gradient(to bottom, #eeeeee00 20%, #eeeeee);
-  position: -webkit-sticky;
-  position: sticky;
-  bottom: -1px;
-  left: 0;
-  right: 0;
 }
 
 .firstTime .frtContainer form {
@@ -1388,6 +1628,153 @@ abbr {
 }
 
 .firstTime .frtContainer form .weekdays input[type="checkbox"]:checked + label {
+  background-color: #149c7c;
+  color: #ffffff;
+}
+
+.firstTime .frtContainer .w100 {
+  width: 100%;
+}
+
+.firstTime .frtContainer .frmScroll {
+  height: 42vh;
+  max-height: 620px;
+  min-height: 200px;
+  overflow: hidden;
+  overflow-y: scroll;
+  padding-right: 6px;
+  width: 103%;
+  position: relative;
+}
+
+.firstTime .frtContainer .frmScroll::-webkit-scrollbar {
+  width: 6px;
+  height: 0;
+  background-color: transparent;
+  border-radius: 20pt;
+  visibility: hidden;
+}
+
+.firstTime .frtContainer .frmScroll::-webkit-scrollbar-thumb {
+  background-color: #149c7c50;
+  border-radius: 20pt;
+  visibility: hidden;
+  -webkit-transition: visibility 0.4s ease;
+  transition: visibility 0.4s ease;
+}
+
+.firstTime .frtContainer .frmScroll:hover::-webkit-scrollbar-thumb {
+  visibility: visible;
+}
+
+.firstTime .frtContainer .frmScroll::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 40px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #eeeeee00), to(#eeeeee));
+  background: linear-gradient(to bottom, #eeeeee00 20%, #eeeeee);
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+}
+
+.firstTime .frtContainer .formDocAdd {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.firstTime .frtContainer .formDocAdd .txt {
+  width: 100%;
+}
+
+.firstTime .frtContainer .formDocAdd .txt::-webkit-input-placeholder {
+  opacity: 0.5;
+}
+
+.firstTime .frtContainer .formDocAdd .txt:-ms-input-placeholder {
+  opacity: 0.5;
+}
+
+.firstTime .frtContainer .formDocAdd .txt::-ms-input-placeholder {
+  opacity: 0.5;
+}
+
+.firstTime .frtContainer .formDocAdd .txt::placeholder {
+  opacity: 0.5;
+}
+
+.firstTime .frtContainer .formDocAdd label {
+  font-weight: 700;
+  color: #6b6b6b;
+  margin-left: 1rem;
+  margin-bottom: 0.3rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.firstTime .frtContainer .formDocAdd .downTxt {
+  text-align: right;
+  font-size: 0.8rem;
+  color: #808080;
+  margin-top: 0;
+}
+
+.firstTime .frtContainer .formDocAdd .weekdays {
+  padding: 0.8rem 1.5rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  -ms-grid-rows: (40px)[2];
+      grid-template-rows: repeat(2, 40px);
+  overflow: hidden;
+  justify-items: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-gap: 0.4rem;
+}
+
+.firstTime .frtContainer .formDocAdd .weekdays label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  color: #404040;
+  font-size: 0.9rem;
+  background-color: #e7e7e7ec;
+  border-radius: 3pt;
+}
+
+.firstTime .frtContainer .formDocAdd .weekdays input[type="checkbox"] {
+  position: absolute;
+  left: -9999999%;
+  opacity: 0;
+}
+
+.firstTime .frtContainer .formDocAdd .weekdays input[type="checkbox"]:checked + label {
   background-color: #149c7c;
   color: #ffffff;
 }
@@ -1573,6 +1960,13 @@ abbr {
 }
 
 .dashboard aside .menuContainer .menuItem {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
   width: 240px;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -1583,14 +1977,11 @@ abbr {
   color: #adadad;
   background-color: transparent;
   padding: 0.8rem;
-  margin: 0.5rem 0;
-  display: -webkit-box;
+  margin: 0.2rem 0;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+      flex-direction: row;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -1598,7 +1989,7 @@ abbr {
       -ms-flex-align: center;
           align-items: center;
   font-weight: 700;
-  font-size: 1.15rem;
+  font-size: 1.1rem;
 }
 
 .dashboard aside .menuContainer .menuItem i {
@@ -1650,6 +2041,49 @@ abbr {
   padding: 0.2rem 0.5rem;
 }
 
+.dashboard aside .menuContainer .menuItemDropDown {
+  background-color: transparent;
+  -webkit-transform: translateX(4rem);
+          transform: translateX(4rem);
+  font-size: 1rem;
+  overflow: hidden;
+  height: 0;
+  -webkit-transition: height 0.4s ease;
+  transition: height 0.4s ease;
+}
+
+.dashboard aside .menuContainer .menuItemDropDown .links {
+  all: unset;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  font-weight: 600;
+  width: 150px;
+  height: 30px;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0.5rem 0;
+  opacity: 0.6;
+  cursor: pointer;
+  color: #404040;
+}
+
+.dashboard aside .menuContainer .menuItemDropDown-show {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
 .dashboard aside .menuContainer .active {
   background-color: #edf7f5;
   color: #149c7c;
@@ -1664,6 +2098,11 @@ abbr {
 .dashboard aside .menuContainer .active:hover i {
   -webkit-transform: none;
           transform: none;
+}
+
+.dashboard aside .menuContainer .sub_active {
+  color: #084234 !important;
+  font-weight: 800 !important;
 }
 
 .dashboard main {
@@ -1922,7 +2361,7 @@ abbr {
 }
 
 .dashboard .content {
-  max-width: 1250px;
+  max-width: 1400px;
   margin: 0 auto;
   padding-bottom: 0;
   overflow: hidden;
@@ -1935,6 +2374,7 @@ abbr {
   height: 0;
   background-color: transparent;
   visibility: hidden;
+  border-radius: 40pt;
 }
 
 .dashboard .content::-webkit-scrollbar-thumb {
@@ -1943,6 +2383,7 @@ abbr {
   visibility: hidden;
   -webkit-transition: visibility 0.4s ease;
   transition: visibility 0.4s ease;
+  border-radius: 40pt;
 }
 
 .dashboard .content:hover::-webkit-scrollbar-thumb {
@@ -2870,14 +3311,69 @@ abbr {
   width: 100%;
   overflow: hidden;
   border-radius: 6pt;
+  background-color: #ffffff;
   -webkit-box-shadow: 0 20px 20px -5px #00000017;
           box-shadow: 0 20px 20px -5px #00000017;
 }
 
+.queue .queueData table .dflex {
+  border: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.queue .queueData table .dflex .btnAction {
+  background-color: transparent;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 400pt;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #35353554;
+}
+
+.queue .queueData table .dflex .btnAction:hover {
+  background-color: #20202016;
+}
+
+.queue .queueData table .dflex .btnAction:active {
+  background-color: #20202025;
+}
+
 .queue .queueData td {
-  border: 1px solid #3f3f3f1a;
   text-align: left;
   padding: 4px;
+}
+
+.queue .queueData td .icon-call {
+  all: unset;
+  background-color: transparent;
+  color: #149c7c;
+  border-radius: 500pt;
+  padding: 0.6rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  border: none;
+}
+
+.queue .queueData td .icon-call:hover {
+  background-color: #20202016;
+}
+
+.queue .queueData td .icon-call:active {
+  background-color: #20202025;
 }
 
 .queue .queueData .docActive {
@@ -2899,6 +3395,10 @@ abbr {
   font-weight: 700;
 }
 
+.queue .queueData tr {
+  border-bottom: 1px solid #0000001e;
+}
+
 .queue .queueData tr:nth-child(1) {
   background-color: #149c7c;
   color: #ffffff;
@@ -2906,7 +3406,7 @@ abbr {
 }
 
 .queue .queueData tr:nth-child(1) th {
-  padding: 1.2rem 0.8rem;
+  padding: 1rem 0.2rem;
   text-align: left;
 }
 
@@ -3083,6 +3583,753 @@ abbr {
   body aside,
   body main {
     display: none !important;
+  }
+}
+
+.sectionHolder {
+  padding: 1rem 2rem;
+}
+
+.sectionHolder h2 {
+  font-size: 1.7rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.sectionHolder h4 {
+  font-weight: 400;
+  opacity: 0.8;
+  margin-bottom: 2rem;
+}
+
+.sectionHolder h3 {
+  font-weight: 800;
+}
+
+.sectionHolder .check_container,
+.sectionHolder .radio_container {
+  margin: 1rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.sectionHolder .check_container input[type="checkbox"] {
+  position: absolute;
+  left: -9999999%;
+  opacity: 0;
+}
+
+.sectionHolder .check_container label {
+  cursor: pointer;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.sectionHolder .check_container label::before {
+  position: absolute;
+  left: 0;
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  margin-right: 0.8rem;
+  background-color: #00000027;
+  opacity: 0.5;
+  border: 2px solid #00000013;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.sectionHolder .check_container input[type="checkbox"]:checked + label::before {
+  border-left: 0px;
+  border-top: 0;
+  background-color: transparent;
+  border-color: #149c7c;
+  border-radius: 0;
+  width: 8px;
+  height: 18px;
+  -webkit-transform: rotate(40deg) translate(4px, -8px);
+          transform: rotate(40deg) translate(4px, -8px);
+  opacity: 1;
+}
+
+.sectionHolder .check_container .frm-content {
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 0.5rem;
+}
+
+.sectionHolder .radio_container .frm-content {
+  padding: 0.8rem 1rem;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 15px 20px -5pt #66666620;
+          box-shadow: 0 15px 20px -5pt #66666620;
+  border-radius: 5pt;
+}
+
+.sectionHolder .radio_container .frm-content .frm-text {
+  margin-bottom: 0.8rem;
+}
+
+.sectionHolder .radio_container .frm-content .frm-text p {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.sectionHolder .radio_container .frm-content .frm-radio_container {
+  display: -ms-grid;
+  display: grid;
+  gap: 1rem;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sectionHolder .radio_container .frm-content .frm-radio_container .frm-radio label {
+  font-size: 0.9rem;
+}
+
+.sectionHolder .radio_container .frm-content .frm-radio_container .frm-radio input[type="radio"] {
+  position: absolute;
+  left: -9999999%;
+  opacity: 0;
+}
+
+.sectionHolder .radio_container .frm-content .frm-radio_container .frm-radio label {
+  cursor: pointer;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.sectionHolder .radio_container .frm-content .frm-radio_container .frm-radio label::before {
+  position: absolute;
+  left: 0;
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  margin-right: 0.8rem;
+  border-radius: 500pt;
+  background-color: #00000027;
+  opacity: 0.5;
+  border: 2px solid #00000013;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.sectionHolder .radio_container .frm-content .frm-radio_container .frm-radio input[type="radio"]:checked + label::before {
+  border-left: 0px;
+  border-top: 0;
+  background-color: transparent;
+  border-color: #149c7c;
+  border-radius: 0;
+  width: 8px;
+  height: 18px;
+  -webkit-transform: rotate(40deg) translate(4px, -8px);
+          transform: rotate(40deg) translate(4px, -8px);
+  opacity: 1;
+}
+
+.sectionHolder .dGrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.sectionHolder .dGrid .text_container {
+  width: 100%;
+}
+
+.sectionHolder .dGrid .text_container .txt {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.sectionHolder .twoInputs {
+  gap: 0.5rem;
+}
+
+.sectionHolder .twoInputs .txt {
+  width: 100%;
+}
+
+.patientProfile {
+  overflow-x: hidden;
+}
+
+.patientProfile .profileDescription {
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.patientProfile .profileDescription .imgContainer {
+  height: 90px;
+  width: 90px;
+  border-radius: 600pt;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+  -webkit-box-shadow: 2px 20px 10px -5pt #00583418;
+          box-shadow: 2px 20px 10px -5pt #00583418;
+  background-color: #149c7c;
+  background: linear-gradient(120deg, #149c7c, #156b57);
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.patientProfile .profileDescription .imgContainer img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.patientProfile .profileDescription h2 {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.patientProfile .profileDescription h5 {
+  font-weight: 600;
+  color: #6b6b6b;
+  font-size: 1rem;
+}
+
+.patientProfile .formFill {
+  padding: 2rem;
+}
+
+.patientProfile .bg-solid {
+  background-color: #ffffff;
+  border-radius: 4pt;
+  overflow: hidden;
+  -webkit-box-shadow: 0 16pt 40pt -10pt #0000001a;
+          box-shadow: 0 16pt 40pt -10pt #0000001a;
+  margin: 1rem 0;
+  padding-top: 1.6rem;
+}
+
+.patientProfile .tabs {
+  position: absolute;
+  left: -999999%;
+  opacity: 0;
+  z-index: -999;
+  pointer-events: none;
+  -webkit-transition: opacity 400ms ease;
+  transition: opacity 400ms ease;
+}
+
+.patientProfile .tb-show {
+  position: static;
+  opacity: 1;
+  pointer-events: all;
+  z-index: 1;
+}
+
+.patientProfile .btn-links_container {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.patientProfile .btn-links_container .btn-links {
+  padding: 0.8rem 1rem;
+  -webkit-transition: background-color 200ms ease;
+  transition: background-color 200ms ease;
+}
+
+.patientProfile .btn-links_container .btn-links:hover {
+  background-color: #6d6d6d1c;
+}
+
+.patientProfile .btn-links_container .btn-links::after {
+  display: none;
+  width: 0;
+  height: 4pt;
+  background-color: #149c7c;
+}
+
+.patientProfile .btn-links_container .btn-links_active {
+  background-color: #149c7c;
+  color: #ffffff;
+}
+
+.patientProfile .btn-links_container .btn-links_active:hover {
+  background-color: #149c7c;
+}
+
+.patientProfile .btn-links_container .btn-links_active::after {
+  width: 100%;
+}
+
+.patientProfile .txt {
+  background-color: #00000008;
+  border: 2pt solid #00000020;
+}
+
+.patientProfile .txt:hover {
+  border: 2pt solid #0000003d;
+}
+
+.patientProfile .txt:focus {
+  border: 2pt solid #0000005b;
+}
+
+.text_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.text_container label {
+  margin-left: 0.5rem;
+}
+
+.text_container .txt {
+  border: 2pt solid #00000020;
+}
+
+.text_container .txt:hover {
+  border: 2pt solid #0000003d;
+}
+
+.text_container .txt:focus {
+  border: 2pt solid #0000005b;
+}
+
+.tc-stretch {
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.tc-stretch input {
+  width: 100%;
+}
+
+.border-bottom-dashed {
+  border-bottom: 1px dashed #00000052;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn-links {
+  all: unset;
+  background-color: transparent;
+  color: #404040;
+  cursor: pointer;
+  padding: 0.8rem 1rem;
+  position: relative;
+}
+
+.btn-links::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1pt;
+  background-color: #0000005b;
+}
+
+.table_container {
+  -webkit-box-shadow: 2px 10px 40px -5pt #0000001e;
+          box-shadow: 2px 10px 40px -5pt #0000001e;
+  border-radius: 4pt;
+}
+
+.table_container table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table_container table td,
+.table_container table th {
+  border: 1px solid #00000018;
+  padding: 8px;
+}
+
+.table_container table tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+.table_container table th {
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  text-align: left;
+  background-color: #149c7c;
+  color: #ffffff;
+}
+
+.text_underline {
+  text-decoration: underline;
+}
+
+.w-fit-content {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.btn-xsm {
+  padding: 0.4rem;
+}
+
+.text-light {
+  font-weight: 400;
+}
+
+.opa1 {
+  opacity: 0.1 !important;
+}
+
+.opa2 {
+  opacity: 0.2 !important;
+}
+
+.opa3 {
+  opacity: 0.3 !important;
+}
+
+.opa4 {
+  opacity: 0.4 !important;
+}
+
+.opa5 {
+  opacity: 0.5 !important;
+}
+
+.opa6 {
+  opacity: 0.6 !important;
+}
+
+.opa7 {
+  opacity: 0.7 !important;
+}
+
+.opa8 {
+  opacity: 0.8 !important;
+}
+
+.opa9 {
+  opacity: 0.9 !important;
+}
+
+.appointmentContainer {
+  padding-bottom: 3rem;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  gap: 1rem;
+}
+
+.appointmentContainer .appointmentCard {
+  overflow: hidden;
+  padding: 1rem;
+  border-radius: 6pt;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 15px 40px -10px #00000018;
+          box-shadow: 0 15px 40px -10px #00000018;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100px 1fr 40px;
+      grid-template-columns: 100px 1fr 40px;
+  gap: 1rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.appointmentContainer .appointmentCard .appointmentTimeContainer p {
+  font-weight: 800;
+}
+
+.appointmentContainer .appointmentCard .appointmentSlotContainer {
+  background-color: #149c7c11;
+  border-radius: 6pt;
+  padding: 1rem;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.appointmentContainer .appointmentCard .appointmentSlotContainer p {
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.appointmentContainer .appointmentCard .appointmentSlotContainer a {
+  all: unset;
+  font-weight: 600;
+  font-size: 0.8rem;
+  opacity: 0.8;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.appointmentContainer .appointmentCard .appointmentActions .btn {
+  border-radius: 600pt;
+  height: 40px;
+  width: 40px;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.appointmentContainer .appointmentCard .appointmentActions .btn i {
+  font-size: 1.2rem;
+}
+
+.mt-1 {
+  margin-top: 1rem !important;
+}
+
+.mt-2 {
+  margin-top: 2rem !important;
+}
+
+.mt-3 {
+  margin-top: 3rem !important;
+}
+
+.mt-4 {
+  margin-top: 4rem !important;
+}
+
+.fileIN_Container input[type="file"] {
+  position: absolute;
+  opacity: 0;
+  left: -999999999%;
+}
+
+.fileIN_Container .fileIN {
+  cursor: pointer;
+  margin: 0;
+  font-size: 1rem;
+  color: #808080;
+}
+
+.p-0 {
+  padding: 0 !important;
+}
+
+.p-1 {
+  padding: 1rem !important;
+}
+
+.p-2 {
+  padding: 2rem !important;
+}
+
+.p-3 {
+  padding: 3rem !important;
+}
+
+.p-4 {
+  padding: 4rem !important;
+}
+
+.bgSolid {
+  background-color: #ffffff;
+  border-radius: 4pt;
+  overflow: hidden;
+  -webkit-box-shadow: 0 16pt 40pt -10pt #0000001a;
+          box-shadow: 0 16pt 40pt -10pt #0000001a;
+  margin: 1rem 0;
+  padding: 1.6rem 2rem;
+}
+
+.bgSolid h3 {
+  margin-bottom: 1rem;
+}
+
+.dtable table th {
+  padding: 1rem 2rem;
+}
+
+.dtable table td {
+  padding: 0.8rem 2rem;
+  border: none;
+}
+
+.dtable table tr {
+  border-bottom: 1px solid #00000013;
+}
+
+.billsPage {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 400px;
+      grid-template-columns: 1fr 400px;
+}
+
+.billsPage .lineChartContainer {
+  margin: 2rem 0;
+  width: 100%;
+  height: 350px;
+}
+
+.billsPage .lineChartContainer iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.billsPage .card {
+  padding: 1rem 1.6rem;
+  background-color: #ffffff;
+  -webkit-box-shadow: 2px 10px 40px #00000015;
+          box-shadow: 2px 10px 40px #00000015;
+  border-radius: 6pt;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.billsPage .card ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 0rem 1.4rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style-type: none;
+  width: 100%;
+}
+
+.billsPage .card ul li {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.billsPage .card ul li label {
+  text-transform: capitalize;
+  opacity: 0.8;
+}
+
+.billsPage .card ul li p {
+  color: #149c7c;
+  font-weight: 600;
+}
+
+@media (max-width: 1170px) {
+  .billsPage {
+    -ms-grid-columns: 1fr 300px;
+        grid-template-columns: 1fr 300px;
+  }
+}
+
+@media (max-width: 850px) {
+  .billsPage {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
   }
 }
 /*# sourceMappingURL=v1.css.map */

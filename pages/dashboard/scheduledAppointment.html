@@ -1,0 +1,114 @@
+<div class="content queue">
+  <h1 class="frmHeading">Scheduled Appointment</h1>
+  <br />
+  <form class="frmControl" id="frmQueue">
+    <label for="txtSelDoc">Doctor :</label>
+    <span class="dflex">
+      <input
+        type="text"
+        list="dtSelDoc"
+        class="txt txt-sm"
+        placeholder="Choose the Doctor"
+        required
+      />
+      <button type="submit" class="btn btn-sm">Generate</button>
+    </span>
+    <datalist id="dtSelDoc">
+      <option value="Dr. Lal Bahadur"></option>
+      <option value="Dr. Muis Naick"></option>
+      <option value="Dr. Luis Xiaver Okus"></option>
+    </datalist>
+    <small> ** Please Select Doctor to see the Booking List</small>
+  </form>
+  <br />
+  <div class="sectionHolder">
+    <h2>Appointments</h2>
+    <h4 class="text-light opa6">Below are the Appointment for Today...</h4>
+    <div class="appointmentContainer">
+      <div class="appointmentCard">
+        <div class="appointmentTimeContainer">
+          <p>10:00pm</p>
+        </div>
+        <div class="appointmentSlotContainer">
+          <p>Druba #pid00152893</p>
+          <a href="tel:8787654321">8787 654 321</a>
+        </div>
+        <div class="appointmentActions">
+          <button class="btn btn-xsm btn-danger btn-icon">
+            <i class="icon-delete"></i>
+          </button>
+        </div>
+      </div>
+      <div class="appointmentCard">
+        <div class="appointmentTimeContainer">
+          <p>10:30pm</p>
+        </div>
+        <div class="appointmentSlotContainer"></div>
+        <div class="appointmentActions">
+          <button class="btn btn-xsm btn-primary btn-icon">
+            <i class="icon-add"></i>
+          </button>
+        </div>
+      </div>
+      <div class="appointmentCard">
+        <div class="appointmentTimeContainer">
+          <p>11:00pm</p>
+        </div>
+        <div class="appointmentSlotContainer">
+          <p>Unknown Patient #pid00152893</p>
+          <a href="tel:8787654321">8787 654 321</a>
+        </div>
+        <div class="appointmentActions">
+          <button class="btn btn-xsm btn-danger btn-icon">
+            <i class="icon-delete"></i>
+          </button>
+        </div>
+      </div>
+      <div class="appointmentCard">
+        <div class="appointmentTimeContainer">
+          <p>11:30pm</p>
+        </div>
+        <div class="appointmentSlotContainer"></div>
+        <div class="appointmentActions">
+          <button class="btn btn-xsm btn-primary btn-icon">
+            <i class="icon-add"></i>
+          </button>
+        </div>
+      </div>
+      <div class="appointmentCard">
+        <div class="appointmentTimeContainer">
+          <p>12:00pm</p>
+        </div>
+        <div class="appointmentSlotContainer"></div>
+        <div class="appointmentActions">
+          <button class="btn btn-xsm btn-primary btn-icon">
+            <i class="icon-add"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="appointmentCard">
+        <div class="appointmentTimeContainer">
+          <p>12:30pm</p>
+        </div>
+        <div class="appointmentSlotContainer"></div>
+        <div class="appointmentActions">
+          <button class="btn btn-xsm btn-primary btn-icon">
+            <i class="icon-add"></i>
+          </button>
+        </div>
+      </div>
+      <div class="appointmentCard">
+        <div class="appointmentTimeContainer">
+          <p>01:00pm</p>
+        </div>
+        <div class="appointmentSlotContainer"></div>
+        <div class="appointmentActions">
+          <button class="btn btn-xsm btn-primary btn-icon">
+            <i class="icon-add"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

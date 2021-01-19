@@ -1,0 +1,52 @@
+<div class="content queue">
+  <h1 class="frmHeading">Follow-Ups Appointments</h1>
+  <br />
+  <form class="frmControl" id="frmQueue">
+    <label for="txtSelDoc">Doctor :</label>
+    <span class="dflex">
+      <select class="txt txt-sm" id="txtSelDoc">
+        <option>Dr. Muis Naick</option>
+        <option>Dr. Lal Bahadur</option>
+        <option>Dr. Luis Xiaver Okus</option>
+      </select>
+      <button type="submit" class="btn btn-sm">Generate</button>
+    </span>
+
+    <small class="mt-1 opa7">
+      All the patients with a possible follow-up date are listed below. <br />
+      Call the patients to increase the chances of getting them back to the
+      clinic.
+    </small>
+  </form>
+  <br />
+  <div class="table_container table-responsive">
+    <table>
+      <tr>
+        <th>Follow_Up_Date</th>
+        <th>Name</th>
+        <th>Age, Gender</th>
+        <th>Mobile Number</th>
+        <th>Last Appointment</th>
+        <th class="txt-center">Actions</th>
+      </tr>
+      <tr>
+        <td>25 Jan, 2020</td>
+        <td>Patient Name</td>
+        <td>28years, Male</td>
+        <td>+91 9885 245 674</td>
+        <td>28 Dec, 2020</td>
+        <td>
+          <div class="dflex gap1 w100">
+            <button class="btn btn-xsm btn-transparent btn-icon btnAction">
+              <i class="icon-check txt-success"></i>
+            </button>
+            <button class="btn btn-xsm btn-transparent btn-icon">
+              <i class="icon-clear txt-danger"></i>
+            </button>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <br />
+</div>

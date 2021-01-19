@@ -28,17 +28,31 @@
     <div class="queueData table-responsive">
       <table>
         <tr>
-          <th width="5%">Slno.</th>
+          <th width="6%">Slno.</th>
           <th>Name</th>
           <th>Contact</th>
           <th>Booking Time</th>
+          <th width="10%" class="txt-center">Billing</th>
           <th>State</th>
+          <th class="txt-center">Profile</th>
         </tr>
         <tr>
-          <td>1</td>
+          <td>1.</td>
           <td>Sample Patient</td>
-          <td>+91 7589 285 298</td>
+          <td>
+            <a href="tel:7589285298" class="noStyle">
+              +91 7589 285 298 <i class="icon-call"></i>
+            </a>
+          </td>
           <td>4:00pm</td>
+          <td class="dflex">
+            <button
+              class="btn btn-sm btnAction"
+              onclick="reDirect('#!/patientProfile/Sample Patient/p_billing')"
+            >
+              <i class="icon-add"></i>
+            </button>
+          </td>
           <td>
             <select class="txt txt-sm">
               <option value="0">In Queue</option>
@@ -47,61 +61,13 @@
               <option value="1">Check Out</option>
             </select>
           </td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Sample Patient</td>
-          <td>+91 7589 285 298</td>
-          <td>4:30pm</td>
-          <td>
-            <select class="txt txt-sm">
-              <option value="0">In Queue</option>
-              <option value="1" selected>Check In</option>
-              <option value="1">With Doc</option>
-              <option value="1">Check Out</option>
-            </select>
-          </td>
-        </tr>
-        <tr class="docActive">
-          <td>3</td>
-          <td>Sample Patient</td>
-          <td>+91 7589 285 298</td>
-          <td>5:00pm</td>
-          <td>
-            <select class="txt txt-sm">
-              <option value="0">In Queue</option>
-              <option value="1">Check In</option>
-              <option value="1" selected>With Doc</option>
-              <option value="1">Check Out</option>
-            </select>
-          </td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>Sample Patient</td>
-          <td>+91 7589 285 298</td>
-          <td>5:30pm</td>
-          <td>
-            <select class="txt txt-sm">
-              <option value="0">In Queue</option>
-              <option value="1" selected>Check In</option>
-              <option value="1">With Doc</option>
-              <option value="1">Check Out</option>
-            </select>
-          </td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>Sample Patient</td>
-          <td>+91 7589 285 298</td>
-          <td>6:00pm</td>
-          <td>
-            <select class="txt txt-sm">
-              <option value="0">In Queue</option>
-              <option value="1" selected>Check In</option>
-              <option value="1">With Doc</option>
-              <option value="1">Check Out</option>
-            </select>
+          <td class="dflex">
+            <button
+              class="btn btn-sm btnAction border-0"
+              onclick="reDirect('#!/patientProfile/p00000001/p_details')"
+            >
+              <i class="icon-keyboard_tab"></i>
+            </button>
           </td>
         </tr>
       </table>

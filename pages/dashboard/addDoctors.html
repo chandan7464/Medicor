@@ -10,14 +10,14 @@
 
   <hr />
 
-  <div class="firstTime allTime allTimeShow" id="md1">
+  <div class="firstTime allTime" id="md1">
     <div class="frtContainer">
       <button class="closeBtn" onclick="remAddDoc('md1')">
         <i class="icon-cancel"></i>
       </button>
       <h2>Add Doctors</h2>
       <h4>Enter Doctors Details for this clinic</h4>
-      <form id="frmDoc" onsubmit="remAddDoc('md1')">
+      <div id="frmDoc" class="formDocAdd w100" onsubmit="remAddDoc('md1')">
         <div class="frmScroll">
           <label for="txtClinicName">Doctor Name :</label>
           <input
@@ -47,23 +47,33 @@
           </div>
           <span class="f_nLine">
             <label for="txtDocAvailFROM">Doctor's Timing (From) :</label>
-            <input
-              type="time"
-              class="txt"
-              id="txtDocTimingFrm"
-              placeholder="From"
-              required
-            />
+            <div class="dTimeTxtControl">
+              <div class="txtDropDownContainer">
+                <input
+                  type="text"
+                  class="txt"
+                  onclick="dTimePicker(this)"
+                  value="00:00 AM"
+                  id="txtDocAvailFROM"
+                  readonly
+                />
+              </div>
+            </div>
           </span>
           <span class="f_nLine">
-            <label for="txtDocAvailFROM">Doctor's Timing (To) :</label>
-            <input
-              type="time"
-              class="txt"
-              id="txtDocTimingTo"
-              placeholder="To"
-              required
-            />
+            <label for="txtDocAvailTO">Doctor's Timing (To) :</label>
+            <div class="dTimeTxtControl">
+              <div class="txtDropDownContainer">
+                <input
+                  type="text"
+                  class="txt"
+                  onclick="dTimePicker(this)"
+                  value="00:00 AM"
+                  id="txtDocAvailTO"
+                  readonly
+                />
+              </div>
+            </div>
           </span>
           <label for="txtNoPatient">No. of Patients seen per hour :</label>
           <input
@@ -87,7 +97,7 @@
           />
         </div>
         <button class="btn" type="submit">Register this Doctor</button>
-      </form>
+      </div>
     </div>
   </div>
 
@@ -105,6 +115,7 @@
         <th>Date of Birth</th>
         <th width="5%">Age</th>
         <th>Qualification</th>
+        <th>Actions</th>
       </tr>
       <tr>
         <td>1</td>
@@ -115,6 +126,14 @@
         <td>30-12-1990</td>
         <td>29</td>
         <td>MBBS</td>
+        <td class="dflex gap1">
+          <button class="btn btn-xsm btn-warning">
+            <i class="icon-create txt-white"></i>
+          </button>
+          <button class="btn btn-xsm btn-danger">
+            <i class="icon-delete txt-white"></i>
+          </button>
+        </td>
       </tr>
       <tr>
         <td>2</td>
@@ -125,6 +144,14 @@
         <td>30-12-1990</td>
         <td>29</td>
         <td>MBBS</td>
+        <td class="dflex gap1">
+          <button class="btn btn-xsm btn-warning">
+            <i class="icon-create txt-white"></i>
+          </button>
+          <button class="btn btn-xsm btn-danger">
+            <i class="icon-delete txt-white"></i>
+          </button>
+        </td>
       </tr>
       <tr>
         <td>3</td>
@@ -134,27 +161,15 @@
         <td>Tripura, India</td>
         <td>30-12-1990</td>
         <td>29</td>
-        <td>MD</td>
-      </tr>
-      <tr>
-        <td>4</td>
-        <td>Sample Doctor</td>
-        <td>+91 7589 285 298</td>
-        <td>Male</td>
-        <td>Tripura, India</td>
-        <td>30-12-1990</td>
-        <td>29</td>
-        <td>P.hd</td>
-      </tr>
-      <tr>
-        <td>5</td>
-        <td>Sample Doctor</td>
-        <td>+91 7589 285 298</td>
-        <td>Male</td>
-        <td>Tripura, India</td>
-        <td>30-12-1990</td>
-        <td>29</td>
-        <td>Dentist</td>
+        <td>MBBS</td>
+        <td class="dflex gap1">
+          <button class="btn btn-xsm btn-warning">
+            <i class="icon-create txt-white"></i>
+          </button>
+          <button class="btn btn-xsm btn-danger">
+            <i class="icon-delete txt-white"></i>
+          </button>
+        </td>
       </tr>
     </table>
   </div>
